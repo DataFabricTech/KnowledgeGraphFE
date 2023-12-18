@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+
+  .contents {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+  }
+
+  .lnb {
+    flex: 1 0 auto;
+  }
+}
