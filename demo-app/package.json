@@ -1,0 +1,36 @@
+{
+  "name": "demo-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "cytoscape": "^3.27.0",
+    "cytoscape-cola": "^2.5.1",
+    "cytoscape-elk": "^2.2.0",
+    "cytoscape-fcose": "^2.2.0",
+    "d3": "^7.8.5",
+    "mobx": "^6.10.2",
+    "mobx-react-lite": "^4.0.5",
+    "next": "13.5.6",
+    "rc-slider": "^10.4.0",
+    "react": "^18",
+    "react-color": "^2.19.3",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/cytoscape": "^3.19.14",
+    "@types/d3": "^7.4.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-color": "^3.0.9",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.6",
+    "typescript": "^5"
+  }
+}
