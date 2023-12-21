@@ -1,0 +1,25 @@
+.btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  padding: 0px 10px;
+  align-items: center;
+  display: flex;
+  gap: 14px;
+}
+.btnIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+.btnItem {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0px 16px 0px 32px;
+}
+.btnItem:hover {
+  background-color: #18a0fb;
+}
