@@ -1,0 +1,46 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  row-gap: 16px;
+  border: none;
+}
+
+.input {
+  appearance: none;
+  border: 2px solid #a7a7a7;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.input:checked {
+  border: 2px solid #000;
+  position: relative;
+}
+.input:checked:after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.span {
+  color: #a7a7a7;
+}
+
+.input:checked + .span {
+  color: #000;
+}
+
+.label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
