@@ -1,0 +1,27 @@
+.main {
+  height: 40px;
+  background: #000;
+  padding-top: 6px;
+  padding-left: 27px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  color: #fff;
+
+  .tab {
+    padding: 6px 10px;
+    width: 135px;
+    height: 100%;
+    border-radius: 4px 4px 0px 0px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    cursor: pointer;
+  }
+
+  .selectedTab {
+    background: #2c2c2c;
+  }
+}
