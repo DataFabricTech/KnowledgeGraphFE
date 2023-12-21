@@ -14,7 +14,6 @@ interface TabProps {
 
 const Tab = ({ tabList, selectedId, onSelect }: TabProps) => {
   const selectedIdx = tabList.findIndex((tab) => tab.id === selectedId);
-  console.log(process.env);
 
   return (
     <div className={styles.main}>

@@ -10,7 +10,7 @@ import { observer } from "mobx-react-lite";
 
 const Inner = observer(() => {
   const root = useRootStore();
-  console.log(process.env);
+
   return (
     <>
       <Tab

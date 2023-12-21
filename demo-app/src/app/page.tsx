@@ -22,7 +22,6 @@ export const getData = async () => {
     getRelationData("1"),
     getCategoryData(),
   ]);
-  console.log(process.env.NEXT_PUBLIC_ANALYTICS_ID);
 
   return { relationData, categoryData };
 };
