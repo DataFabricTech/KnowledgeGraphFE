@@ -1,0 +1,32 @@
+.rc-slider-handle {
+  position: absolute;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  margin-top: -4px;
+  background-color: #fff;
+  border: solid 3px #000;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 1;
+}
+.rc-slider-handle:hover {
+  border: solid 3px #000;
+}
+
+.rc-slider-track,
+.rc-slider-tracks {
+  position: absolute;
+  height: 4px;
+  background-color: #000;
+  border-radius: 6px;
+}
+
+.rc-slider-handle-dragging {
+  border-color: #000 !important;
+  box-shadow: none !important;
+  opacity: 1;
+}
+.rc-slider-handle:focus-visible {
+  box-shadow: none;
+}

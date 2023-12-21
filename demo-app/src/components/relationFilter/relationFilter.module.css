@@ -1,0 +1,133 @@
+.root {
+  /* padding: 4px 0px; */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btnParam {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.rootBtn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 13px;
+
+  font-weight: 500;
+
+  padding: 0px 10px;
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  height: 100%;
+}
+
+.popoverRoot {
+  width: 420px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title {
+  color: #202020;
+  /* body/5 */
+
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.closeBtn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  transform: translate(5px, -5px);
+}
+
+.sliderRoot {
+  padding: 0px 5px 0px 5px;
+}
+
+.sliderLabelRoot {
+  position: relative;
+  height: 24px;
+}
+
+.sliderLabel {
+  position: absolute;
+  display: inline-flex;
+  padding: 4px 6px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: #000;
+  font-size: 12px;
+
+  font-weight: 500;
+  color: #fff;
+  transform: translateX(-50%);
+}
+
+.inputRoot {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.inputRange {
+  color: #202020;
+  /* body/5 */
+
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+}
+.inputLabel {
+  color: #202020;
+
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.input {
+  flex: 1 1 auto;
+  border: none;
+  text-align: right;
+  color: #202020;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  width: 100%;
+}
+.inputEnd {
+  flex: 0 0 auto;
+  color: #202020;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inputContainer {
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  display: flex;
+  padding: 10px 10px;
+  gap: 10px;
+  border-radius: 4px;
+}
