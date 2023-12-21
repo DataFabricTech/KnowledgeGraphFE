@@ -1,0 +1,1 @@
+{"meta":{"learningDate":[2023,10,13,15,26],"applyDate":[2023,10,13,15,26],"method":"Relation","algorithm":["CosineSimilarity"]},"nodes":[{"id":"1","name":"명동","type":"FILE","user":"YS"},{"id":"578","name":"수내3동","type":"FILE","user":"JY"}],"edges":[{"sourceNodeId":"1","targetNodeId":"578","score":0.016773896}]}

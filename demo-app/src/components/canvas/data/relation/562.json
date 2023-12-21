@@ -1,0 +1,1 @@
+{"meta":{"learningDate":[2023,10,13,15,26],"applyDate":[2023,10,13,15,26],"method":"Relation","algorithm":["CosineSimilarity"]},"nodes":[{"id":"446","name":"군포2동","type":"FILE","user":"Royd"},{"id":"562","name":"수리동","type":"FILE","user":"Pierre"}],"edges":[{"sourceNodeId":"446","targetNodeId":"562","score":0.01941636}]}

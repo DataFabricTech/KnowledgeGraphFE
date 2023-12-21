@@ -1,0 +1,2529 @@
+{
+  "meta": {
+    "learningDate": [2023, 10, 13, 15, 26],
+    "applyDate": [2023, 10, 13, 15, 26],
+    "method": "Category",
+    "algorithm": ["Clustering"]
+  },
+  "category": {
+    "id": "1000",
+    "name": "root",
+    "parentId": "-1",
+    "children": [
+      {
+        "id": "1002",
+        "name": "서울",
+        "parentId": "1000",
+        "children": [
+          {
+            "id": "1003",
+            "name": "가평군",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "481", "name": "가평읍", "type": "FILE", "user": "Royd" },
+              {
+                "id": "482",
+                "name": "청평면",
+                "type": "FILE",
+                "user": "Pierre"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1004",
+            "name": "강남구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              {
+                "id": "411",
+                "name": "논현1동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "412",
+                "name": "삼성2동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "413",
+                "name": "역삼1동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "414",
+                "name": "일원본동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "436",
+                "name": "논현2동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "437", "name": "도곡1동", "type": "FILE", "user": "Pel" },
+              { "id": "464", "name": "청담동", "type": "FILE", "user": "JY" },
+              {
+                "id": "518",
+                "name": "수서동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "682", "name": "일원1동", "type": "FILE", "user": "YS" },
+              {
+                "id": "683",
+                "name": "일원2동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "369", "name": "신사동", "type": "FILE", "user": "Admin" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1005",
+            "name": "강동구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "349", "name": "둔촌1동", "type": "FILE", "user": "SY" },
+              { "id": "350", "name": "성내1동", "type": "FILE", "user": "SY" },
+              { "id": "351", "name": "암사3동", "type": "FILE", "user": "YS" },
+              { "id": "352", "name": "천호1동", "type": "FILE", "user": "JH" },
+              {
+                "id": "465",
+                "name": "둔촌2동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "483",
+                "name": "성내2동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "484", "name": "천호2동", "type": "FILE", "user": "SY" },
+              { "id": "519", "name": "천호3동", "type": "FILE", "user": "YS" },
+              {
+                "id": "574",
+                "name": "명일1동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "623",
+                "name": "암사2동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "647", "name": "명일2동", "type": "FILE", "user": "JY" },
+              {
+                "id": "684",
+                "name": "성내3동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "685", "name": "암사1동", "type": "FILE", "user": "YS" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1006",
+            "name": "강북구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "353", "name": "번2동", "type": "FILE", "user": "Pel" },
+              { "id": "354", "name": "수유1동", "type": "FILE", "user": "JY" },
+              {
+                "id": "415",
+                "name": "번3동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "438", "name": "수유2동", "type": "FILE", "user": "Pel" },
+              { "id": "485", "name": "삼각산동", "type": "FILE", "user": "MS" },
+              { "id": "486", "name": "수유3동", "type": "FILE", "user": "MS" },
+              {
+                "id": "520",
+                "name": "삼양동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "548", "name": "미아동", "type": "FILE", "user": "YS" },
+              {
+                "id": "549",
+                "name": "우이동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "605", "name": "송중동", "type": "FILE", "user": "Pel" },
+              { "id": "606", "name": "인수동", "type": "FILE", "user": "MS" },
+              {
+                "id": "648",
+                "name": "번1동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "649", "name": "송천동", "type": "FILE", "user": "MS" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1007",
+            "name": "강서구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "355", "name": "가양2동", "type": "FILE", "user": "SY" },
+              {
+                "id": "356",
+                "name": "발산1동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "357",
+                "name": "염창동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "358",
+                "name": "화곡6동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "416", "name": "가양3동", "type": "FILE", "user": "SY" },
+              { "id": "417", "name": "우장산동", "type": "FILE", "user": "SY" },
+              { "id": "466", "name": "공항동", "type": "FILE", "user": "SY" },
+              { "id": "467", "name": "화곡8동", "type": "FILE", "user": "YS" },
+              {
+                "id": "501",
+                "name": "화곡본동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "521", "name": "방화1동", "type": "FILE", "user": "Pel" },
+              { "id": "522", "name": "화곡1동", "type": "FILE", "user": "JH" },
+              {
+                "id": "607",
+                "name": "화곡2동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "650", "name": "방화2동", "type": "FILE", "user": "JY" },
+              { "id": "689", "name": "등촌1동", "type": "FILE", "user": "Royd" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1008",
+            "name": "계양구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "523", "name": "계산1동", "type": "FILE", "user": "MS" },
+              {
+                "id": "575",
+                "name": "계산2동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "624",
+                "name": "작전2동",
+                "type": "FILE",
+                "user": "Pierre"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1009",
+            "name": "관악구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "364", "name": "난향동", "type": "FILE", "user": "YS" },
+              {
+                "id": "365",
+                "name": "삼성동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "366", "name": "서림동", "type": "FILE", "user": "MS" },
+              { "id": "367", "name": "서원동", "type": "FILE", "user": "SY" },
+              { "id": "368", "name": "성현동", "type": "FILE", "user": "SY" },
+              {
+                "id": "369",
+                "name": "신사동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              {
+                "id": "370",
+                "name": "은천동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "371", "name": "조원동", "type": "FILE", "user": "JH" },
+              {
+                "id": "119",
+                "name": "중앙동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "372", "name": "청림동", "type": "FILE", "user": "YS" },
+              { "id": "419", "name": "남현동", "type": "FILE", "user": "YS" },
+              { "id": "420", "name": "인헌동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "421",
+                "name": "행운동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "441",
+                "name": "신림동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "442", "name": "청룡동", "type": "FILE", "user": "SY" },
+              {
+                "id": "471",
+                "name": "신원동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "525",
+                "name": "대학동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "611", "name": "미성동", "type": "FILE", "user": "JY" },
+              {
+                "id": "653",
+                "name": "난곡동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "654", "name": "보라매동", "type": "FILE", "user": "Pel" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1010",
+            "name": "광진구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "376", "name": "구의2동", "type": "FILE", "user": "JY" },
+              {
+                "id": "377",
+                "name": "자양1동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "378", "name": "중곡3동", "type": "FILE", "user": "YS" },
+              { "id": "445", "name": "광장동", "type": "FILE", "user": "MS" },
+              { "id": "446", "name": "구의3동", "type": "FILE", "user": "MS" },
+              { "id": "447", "name": "자양2동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "474",
+                "name": "중곡4동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "490", "name": "자양3동", "type": "FILE", "user": "MS" },
+              { "id": "526", "name": "구의1동", "type": "FILE", "user": "MS" },
+              { "id": "527", "name": "군자동", "type": "FILE", "user": "SY" },
+              { "id": "528", "name": "자양4동", "type": "FILE", "user": "Pel" },
+              { "id": "529", "name": "화양동", "type": "FILE", "user": "Pel" },
+              { "id": "578", "name": "능동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "613",
+                "name": "중곡1동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "655",
+                "name": "중곡2동",
+                "type": "FILE",
+                "user": "Charlie"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1011",
+            "name": "구로구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              {
+                "id": "379",
+                "name": "개봉2동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "380",
+                "name": "구로3동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "382", "name": "구로5동", "type": "FILE", "user": "JH" },
+              {
+                "id": "383",
+                "name": "수궁동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "384", "name": "오류1동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "425",
+                "name": "신도림동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "448", "name": "개봉3동", "type": "FILE", "user": "YS" },
+              {
+                "id": "449",
+                "name": "오류2동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "475",
+                "name": "구로4동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "491",
+                "name": "고척1동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              {
+                "id": "579",
+                "name": "고척2동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              {
+                "id": "627",
+                "name": "구로1동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              {
+                "id": "662",
+                "name": "구로2동",
+                "type": "FILE",
+                "user": "Charlie"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1012",
+            "name": "금천구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "390", "name": "독산2동", "type": "FILE", "user": "JH" },
+              { "id": "391", "name": "시흥1동", "type": "FILE", "user": "MS" },
+              {
+                "id": "392",
+                "name": "시흥2동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "450", "name": "가산동", "type": "FILE", "user": "JH" },
+              {
+                "id": "451",
+                "name": "독산3동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "452", "name": "시흥3동", "type": "FILE", "user": "MS" },
+              { "id": "493", "name": "시흥4동", "type": "FILE", "user": "JY" },
+              {
+                "id": "532",
+                "name": "독산4동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "560", "name": "독산1동", "type": "FILE", "user": "MS" },
+              { "id": "561", "name": "시흥5동", "type": "FILE", "user": "Pel" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1013",
+            "name": "남구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              {
+                "id": "394",
+                "name": "주안4동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "395", "name": "주안5동", "type": "FILE", "user": "SY" },
+              { "id": "562", "name": "도화1동", "type": "FILE", "user": "JY" },
+              { "id": "594", "name": "문학동", "type": "FILE", "user": "Royd" },
+              {
+                "id": "614",
+                "name": "숭의2동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "615", "name": "용현5동", "type": "FILE", "user": "JH" },
+              {
+                "id": "663",
+                "name": "주안2동",
+                "type": "FILE",
+                "user": "Dhino"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1014",
+            "name": "남동구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              {
+                "id": "453",
+                "name": "간석1동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "495", "name": "간석3동", "type": "FILE", "user": "YS" },
+              {
+                "id": "509",
+                "name": "간석4동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "533", "name": "구월2동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "563",
+                "name": "구월3동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "411",
+                "name": "논현1동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "616",
+                "name": "논현고잔동",
+                "type": "FILE",
+                "user": "YS"
+              },
+              { "id": "629", "name": "만수1동", "type": "FILE", "user": "YS" },
+              {
+                "id": "630",
+                "name": "만수5동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "656",
+                "name": "장수서창동",
+                "type": "FILE",
+                "user": "Santiago"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1015",
+            "name": "노원구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "398", "name": "공릉1동", "type": "FILE", "user": "SY" },
+              {
+                "id": "399",
+                "name": "상계3.4동",
+                "type": "FILE",
+                "user": "Pel"
+              },
+              { "id": "400", "name": "월계2동", "type": "FILE", "user": "JY" },
+              {
+                "id": "401",
+                "name": "하계1동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              { "id": "429", "name": "하계2동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "455",
+                "name": "공릉2동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "456", "name": "상계5동", "type": "FILE", "user": "JH" },
+              {
+                "id": "457",
+                "name": "월계3동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              { "id": "511", "name": "중계1동", "type": "FILE", "user": "JY" },
+              {
+                "id": "535",
+                "name": "상계10동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "536",
+                "name": "상계6.7동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "580",
+                "name": "상계1동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "581",
+                "name": "상계8동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              {
+                "id": "582",
+                "name": "중계2.3동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "632",
+                "name": "상계2동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "633", "name": "상계9동", "type": "FILE", "user": "MS" },
+              {
+                "id": "634",
+                "name": "중계4동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "657", "name": "중계본동", "type": "FILE", "user": "JH" },
+              { "id": "665", "name": "월계1동", "type": "FILE", "user": "JH" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1016",
+            "name": "도봉구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "402", "name": "방학3동", "type": "FILE", "user": "YS" },
+              {
+                "id": "403",
+                "name": "창2동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "404", "name": "창3동", "type": "FILE", "user": "SY" },
+              { "id": "430", "name": "쌍문1동", "type": "FILE", "user": "YS" },
+              { "id": "458", "name": "창4동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "496",
+                "name": "쌍문2동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "497", "name": "창5동", "type": "FILE", "user": "YS" },
+              { "id": "512", "name": "도봉1동", "type": "FILE", "user": "JH" },
+              {
+                "id": "537",
+                "name": "쌍문3동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "565",
+                "name": "도봉2동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              { "id": "596", "name": "쌍문4동", "type": "FILE", "user": "MS" },
+              {
+                "id": "617",
+                "name": "방학1동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "635", "name": "창1동", "type": "FILE", "user": "JY" },
+              {
+                "id": "666",
+                "name": "방학2동",
+                "type": "FILE",
+                "user": "Santiago"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1017",
+            "name": "동구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              {
+                "id": "583",
+                "name": "금창동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "597",
+                "name": "송현1.2동",
+                "type": "FILE",
+                "user": "Pel"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1018",
+            "name": "동대문구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "405", "name": "장안2동", "type": "FILE", "user": "YS" },
+              {
+                "id": "406",
+                "name": "청량리동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "431",
+                "name": "용신동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "432", "name": "회기동", "type": "FILE", "user": "Royd" },
+              {
+                "id": "459",
+                "name": "전농1동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              {
+                "id": "538",
+                "name": "이문1동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "539",
+                "name": "휘경1동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              {
+                "id": "566",
+                "name": "전농2동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              { "id": "584", "name": "휘경2동", "type": "FILE", "user": "YS" },
+              {
+                "id": "598",
+                "name": "이문2동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              {
+                "id": "636",
+                "name": "답십리1동",
+                "type": "FILE",
+                "user": "JY"
+              },
+              {
+                "id": "637",
+                "name": "제기동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "667", "name": "답십리2동", "type": "FILE", "user": "JH" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1019",
+            "name": "동작구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "408", "name": "사당1동", "type": "FILE", "user": "MS" },
+              {
+                "id": "409",
+                "name": "사당2동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "410", "name": "상도1동", "type": "FILE", "user": "SY" },
+              {
+                "id": "434",
+                "name": "신대방2동",
+                "type": "FILE",
+                "user": "JH"
+              },
+              { "id": "460", "name": "상도2동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "479",
+                "name": "흑석동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              {
+                "id": "498",
+                "name": "노량진1동",
+                "type": "FILE",
+                "user": "MS"
+              },
+              {
+                "id": "513",
+                "name": "사당3동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "540",
+                "name": "상도3동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "585", "name": "사당4동", "type": "FILE", "user": "JH" },
+              {
+                "id": "586",
+                "name": "상도4동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "599",
+                "name": "노량진2동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "639",
+                "name": "사당5동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "640", "name": "신대방1동", "type": "FILE", "user": "SY" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1020",
+            "name": "마포구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "435", "name": "도화동", "type": "FILE", "user": "JH" },
+              { "id": "461", "name": "망원1동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "462",
+                "name": "서교동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "463", "name": "아현동", "type": "FILE", "user": "Royd" },
+              {
+                "id": "499",
+                "name": "연남동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "514", "name": "망원2동", "type": "FILE", "user": "Pel" },
+              { "id": "541", "name": "성산1동", "type": "FILE", "user": "JY" },
+              {
+                "id": "567",
+                "name": "공덕동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "568",
+                "name": "상암동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "569",
+                "name": "염리동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "600", "name": "성산2동", "type": "FILE", "user": "Pel" },
+              { "id": "601", "name": "용강동", "type": "FILE", "user": "MS" },
+              { "id": "641", "name": "서강동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "668",
+                "name": "신수동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "669",
+                "name": "합정동",
+                "type": "FILE",
+                "user": "Pierre"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1021",
+            "name": "부평구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              {
+                "id": "500",
+                "name": "부평4동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "542",
+                "name": "갈산2동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "543", "name": "산곡2동", "type": "FILE", "user": "JY" },
+              {
+                "id": "570",
+                "name": "부개2동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "587", "name": "삼산1동", "type": "FILE", "user": "JY" },
+              { "id": "602", "name": "부개3동", "type": "FILE", "user": "SY" },
+              { "id": "642", "name": "부평1동", "type": "FILE", "user": "JH" },
+              { "id": "643", "name": "삼산2동", "type": "FILE", "user": "YS" },
+              { "id": "670", "name": "부평2동", "type": "FILE", "user": "MS" },
+              { "id": "671", "name": "십정2동", "type": "FILE", "user": "SY" },
+              {
+                "id": "688",
+                "name": "갈산1동",
+                "type": "FILE",
+                "user": "Santiago"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1022",
+            "name": "서구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              {
+                "id": "515",
+                "name": "가좌3동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "516", "name": "석남3동", "type": "FILE", "user": "YS" },
+              { "id": "517", "name": "연희동", "type": "FILE", "user": "MS" },
+              { "id": "544", "name": "가좌4동", "type": "FILE", "user": "SY" },
+              { "id": "571", "name": "검단1동", "type": "FILE", "user": "YS" },
+              { "id": "588", "name": "검단3동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "603",
+                "name": "검단4동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "618",
+                "name": "검단5동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              {
+                "id": "658",
+                "name": "검암경서동",
+                "type": "FILE",
+                "user": "YS"
+              },
+              {
+                "id": "672",
+                "name": "석남2동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "679",
+                "name": "가정1동",
+                "type": "FILE",
+                "user": "Charlie"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1023",
+            "name": "서대문구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              {
+                "id": "545",
+                "name": "남가좌1동",
+                "type": "FILE",
+                "user": "JH"
+              },
+              {
+                "id": "546",
+                "name": "북가좌2동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "517", "name": "연희동", "type": "FILE", "user": "MS" },
+              {
+                "id": "547",
+                "name": "충현동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "572",
+                "name": "홍은1동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "573", "name": "홍제1동", "type": "FILE", "user": "SY" },
+              { "id": "589", "name": "북아현동", "type": "FILE", "user": "JH" },
+              { "id": "590", "name": "홍제2동", "type": "FILE", "user": "MS" },
+              { "id": "604", "name": "천연동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "619",
+                "name": "남가좌2동",
+                "type": "FILE",
+                "user": "JH"
+              },
+              { "id": "79", "name": "신촌동", "type": "FILE", "user": "Dhino" },
+              { "id": "620", "name": "홍은2동", "type": "FILE", "user": "SY" },
+              {
+                "id": "677",
+                "name": "북가좌1동",
+                "type": "FILE",
+                "user": "Admin"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1024",
+            "name": "서초구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "153", "name": "양재1동", "type": "FILE", "user": "YS" },
+              {
+                "id": "154",
+                "name": "양재2동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "241",
+                "name": "잠원동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "381", "name": "서초3동", "type": "FILE", "user": "JY" },
+              { "id": "424", "name": "서초4동", "type": "FILE", "user": "SY" },
+              { "id": "621", "name": "내곡동", "type": "FILE", "user": "MS" },
+              { "id": "622", "name": "반포3동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "644",
+                "name": "반포2동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "645",
+                "name": "반포4동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              {
+                "id": "646",
+                "name": "반포본동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "659",
+                "name": "방배4동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              {
+                "id": "673",
+                "name": "방배2동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "674",
+                "name": "방배3동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "680", "name": "서초1동", "type": "FILE", "user": "Royd" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1025",
+            "name": "성동구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              {
+                "id": "0",
+                "name": "성수2가1동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "1",
+                "name": "성수2가3동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              {
+                "id": "2",
+                "name": "왕십리도선동",
+                "type": "FILE",
+                "user": "SY"
+              },
+              { "id": "82", "name": "마장동", "type": "FILE", "user": "JY" },
+              { "id": "83", "name": "용답동", "type": "FILE", "user": "MS" },
+              { "id": "112", "name": "사근동", "type": "FILE", "user": "JH" },
+              { "id": "175", "name": "송정동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "176",
+                "name": "응봉동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "198",
+                "name": "금호1가동",
+                "type": "FILE",
+                "user": "SY"
+              },
+              {
+                "id": "199",
+                "name": "성수1가1동",
+                "type": "FILE",
+                "user": "YS"
+              },
+              { "id": "220", "name": "옥수동", "type": "FILE", "user": "Pel" },
+              { "id": "244", "name": "행당1동", "type": "FILE", "user": "JH" },
+              {
+                "id": "263",
+                "name": "금호2.3가동",
+                "type": "FILE",
+                "user": "Pel"
+              },
+              {
+                "id": "279",
+                "name": "성수1가2동",
+                "type": "FILE",
+                "user": "MS"
+              },
+              {
+                "id": "280",
+                "name": "왕십리2동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "296",
+                "name": "금호4가동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "313", "name": "행당2동", "type": "FILE", "user": "JY" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1026",
+            "name": "성북구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "3", "name": "길음1동", "type": "FILE", "user": "YS" },
+              { "id": "4", "name": "삼선동", "type": "FILE", "user": "JH" },
+              { "id": "5", "name": "월곡1동", "type": "FILE", "user": "JY" },
+              { "id": "6", "name": "정릉1동", "type": "FILE", "user": "SY" },
+              {
+                "id": "7",
+                "name": "정릉2동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "84",
+                "name": "월곡2동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "113", "name": "길음2동", "type": "FILE", "user": "JH" },
+              { "id": "134", "name": "정릉3동", "type": "FILE", "user": "YS" },
+              {
+                "id": "156",
+                "name": "석관동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "177", "name": "돈암1동", "type": "FILE", "user": "JH" },
+              {
+                "id": "178",
+                "name": "장위1동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              {
+                "id": "200",
+                "name": "정릉4동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "221",
+                "name": "돈암2동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              {
+                "id": "222",
+                "name": "성북동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "223", "name": "장위2동", "type": "FILE", "user": "SY" },
+              { "id": "281", "name": "동선동", "type": "FILE", "user": "JY" },
+              {
+                "id": "282",
+                "name": "안암동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "283",
+                "name": "종암동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "297",
+                "name": "장위3동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "314",
+                "name": "보문동",
+                "type": "FILE",
+                "user": "Pierre"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1027",
+            "name": "송파구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "8", "name": "가락1동", "type": "FILE", "user": "YS" },
+              { "id": "9", "name": "마천2동", "type": "FILE", "user": "Royd" },
+              {
+                "id": "10",
+                "name": "문정1동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "11",
+                "name": "석촌동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "12",
+                "name": "위례동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "13", "name": "잠실6동", "type": "FILE", "user": "YS" },
+              { "id": "14", "name": "잠실7동", "type": "FILE", "user": "JH" },
+              { "id": "85", "name": "가락2동", "type": "FILE", "user": "JH" },
+              { "id": "86", "name": "잠실2동", "type": "FILE", "user": "Royd" },
+              {
+                "id": "114",
+                "name": "문정2동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "115", "name": "송파1동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "135",
+                "name": "잠실본동",
+                "type": "FILE",
+                "user": "Pel"
+              },
+              { "id": "179", "name": "가락본동", "type": "FILE", "user": "JY" },
+              {
+                "id": "180",
+                "name": "잠실3동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "201", "name": "방이1동", "type": "FILE", "user": "JH" },
+              {
+                "id": "202",
+                "name": "송파2동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              { "id": "224", "name": "거여1동", "type": "FILE", "user": "YS" },
+              { "id": "225", "name": "오금동", "type": "FILE", "user": "SY" },
+              { "id": "226", "name": "잠실4동", "type": "FILE", "user": "MS" },
+              {
+                "id": "227",
+                "name": "장지동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "264",
+                "name": "방이2동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "284",
+                "name": "거여2동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "285", "name": "오륜동", "type": "FILE", "user": "JY" },
+              { "id": "298", "name": "마천1동", "type": "FILE", "user": "Pel" },
+              { "id": "299", "name": "풍납1동", "type": "FILE", "user": "SY" },
+              { "id": "315", "name": "풍납2동", "type": "FILE", "user": "SY" },
+              {
+                "id": "331",
+                "name": "삼전동",
+                "type": "FILE",
+                "user": "Santiago"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1028",
+            "name": "양천구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              {
+                "id": "25",
+                "name": "목1동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "26",
+                "name": "목2동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "27", "name": "목4동", "type": "FILE", "user": "Pel" },
+              { "id": "28", "name": "신월1동", "type": "FILE", "user": "SY" },
+              {
+                "id": "29",
+                "name": "신월4동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "30", "name": "신월5동", "type": "FILE", "user": "MS" },
+              { "id": "31", "name": "신정1동", "type": "FILE", "user": "JY" },
+              {
+                "id": "32",
+                "name": "신정4동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "90",
+                "name": "목3동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "91", "name": "신월2동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "92",
+                "name": "신정2동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "93", "name": "신정6동", "type": "FILE", "user": "MS" },
+              { "id": "117", "name": "목5동", "type": "FILE", "user": "Royd" },
+              { "id": "118", "name": "신월6동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "138",
+                "name": "신월3동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "139", "name": "신정3동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "140",
+                "name": "신정7동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "158", "name": "신월7동", "type": "FILE", "user": "Royd" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1029",
+            "name": "양평군",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "33", "name": "옥천면", "type": "FILE", "user": "YS" },
+              {
+                "id": "34",
+                "name": "용문면",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "94", "name": "지평면", "type": "FILE", "user": "Pel" },
+              {
+                "id": "233",
+                "name": "양서면",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "247",
+                "name": "양평읍",
+                "type": "FILE",
+                "user": "Gasfard"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1030",
+            "name": "연수구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "35", "name": "옥련2동", "type": "FILE", "user": "Royd" },
+              {
+                "id": "141",
+                "name": "동춘2동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "159", "name": "동춘3동", "type": "FILE", "user": "JY" },
+              { "id": "185", "name": "선학동", "type": "FILE", "user": "Royd" },
+              {
+                "id": "207",
+                "name": "송도2동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "248", "name": "연수1동", "type": "FILE", "user": "Pel" },
+              { "id": "269", "name": "연수2동", "type": "FILE", "user": "JH" },
+              { "id": "286", "name": "연수3동", "type": "FILE", "user": "MS" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1031",
+            "name": "영등포구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "36", "name": "당산1동", "type": "FILE", "user": "JH" },
+              {
+                "id": "37",
+                "name": "대림1동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "38", "name": "대림2동", "type": "FILE", "user": "JY" },
+              { "id": "39", "name": "신길1동", "type": "FILE", "user": "YS" },
+              { "id": "40", "name": "신길6동", "type": "FILE", "user": "Royd" },
+              {
+                "id": "41",
+                "name": "신길7동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "42",
+                "name": "여의동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "96",
+                "name": "대림3동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "97",
+                "name": "영등포동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "142",
+                "name": "신길3동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "160", "name": "양평1동", "type": "FILE", "user": "SY" },
+              { "id": "186", "name": "당산2동", "type": "FILE", "user": "SY" },
+              { "id": "187", "name": "도림동", "type": "FILE", "user": "SY" },
+              {
+                "id": "208",
+                "name": "신길4동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              {
+                "id": "209",
+                "name": "영등포본동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "234", "name": "양평2동", "type": "FILE", "user": "Pel" },
+              { "id": "249", "name": "문래동", "type": "FILE", "user": "YS" },
+              { "id": "270", "name": "신길5동", "type": "FILE", "user": "JH" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1032",
+            "name": "영통구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              {
+                "id": "271",
+                "name": "광교1동",
+                "type": "FILE",
+                "user": "Gasfard"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1033",
+            "name": "용산구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "43", "name": "남영동", "type": "FILE", "user": "Pel" },
+              { "id": "44", "name": "서빙고동", "type": "FILE", "user": "YS" },
+              {
+                "id": "45",
+                "name": "용산2가동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "46", "name": "원효로2동", "type": "FILE", "user": "MS" },
+              { "id": "47", "name": "이태원1동", "type": "FILE", "user": "MS" },
+              { "id": "48", "name": "한강로동", "type": "FILE", "user": "JH" },
+              {
+                "id": "49",
+                "name": "효창동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "98", "name": "보광동", "type": "FILE", "user": "JY" },
+              {
+                "id": "99",
+                "name": "이촌1동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "100",
+                "name": "이태원2동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "101", "name": "후암동", "type": "FILE", "user": "SY" },
+              { "id": "120", "name": "용문동", "type": "FILE", "user": "MS" },
+              {
+                "id": "121",
+                "name": "원효로1동",
+                "type": "FILE",
+                "user": "JH"
+              },
+              {
+                "id": "143",
+                "name": "이촌2동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "144",
+                "name": "한남동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "161", "name": "청파동", "type": "FILE", "user": "Pel" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1034",
+            "name": "은평구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "54", "name": "구산동", "type": "FILE", "user": "Admin" },
+              { "id": "55", "name": "녹번동", "type": "FILE", "user": "SY" },
+              { "id": "56", "name": "수색동", "type": "FILE", "user": "YS" },
+              { "id": "57", "name": "응암2동", "type": "FILE", "user": "Pel" },
+              { "id": "123", "name": "신사1동", "type": "FILE", "user": "MS" },
+              { "id": "124", "name": "응암3동", "type": "FILE", "user": "MS" },
+              {
+                "id": "147",
+                "name": "갈현1동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "148",
+                "name": "대조동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "163", "name": "증산동", "type": "FILE", "user": "JH" },
+              { "id": "189", "name": "신사2동", "type": "FILE", "user": "SY" },
+              {
+                "id": "235",
+                "name": "갈현2동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "236", "name": "불광1동", "type": "FILE", "user": "SY" },
+              { "id": "252", "name": "진관동", "type": "FILE", "user": "SY" },
+              {
+                "id": "273",
+                "name": "역촌동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "287", "name": "불광2동", "type": "FILE", "user": "MS" },
+              {
+                "id": "323",
+                "name": "응암1동",
+                "type": "FILE",
+                "user": "Gasfard"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1035",
+            "name": "종로구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "60", "name": "사직동", "type": "FILE", "user": "Admin" },
+              {
+                "id": "61",
+                "name": "종로1.2.3.4가동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "62",
+                "name": "청운효자동",
+                "type": "FILE",
+                "user": "SY"
+              },
+              {
+                "id": "127",
+                "name": "삼청동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "151", "name": "평창동", "type": "FILE", "user": "JH" },
+              {
+                "id": "165",
+                "name": "종로5.6가동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "192", "name": "숭인1동", "type": "FILE", "user": "MS" },
+              {
+                "id": "212",
+                "name": "가회동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "213",
+                "name": "숭인2동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "214",
+                "name": "혜화동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "253",
+                "name": "교남동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "275", "name": "창신1동", "type": "FILE", "user": "JY" },
+              { "id": "288", "name": "무악동", "type": "FILE", "user": "Royd" },
+              {
+                "id": "289",
+                "name": "부암동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "290", "name": "이화동", "type": "FILE", "user": "MS" },
+              { "id": "326", "name": "창신2동", "type": "FILE", "user": "JY" },
+              { "id": "327", "name": "창신3동", "type": "FILE", "user": "JH" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1036",
+            "name": "중구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "63", "name": "동화동", "type": "FILE", "user": "Royd" },
+              {
+                "id": "64",
+                "name": "신당동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "65", "name": "장충동", "type": "FILE", "user": "MS" },
+              {
+                "id": "104",
+                "name": "신포동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "105",
+                "name": "약수동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "106",
+                "name": "중림동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "128", "name": "명동", "type": "FILE", "user": "JH" },
+              { "id": "152", "name": "청구동", "type": "FILE", "user": "Pel" },
+              { "id": "166", "name": "필동", "type": "FILE", "user": "Pierre" },
+              {
+                "id": "193",
+                "name": "영종동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "215",
+                "name": "북성동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "216", "name": "운서동", "type": "FILE", "user": "MS" },
+              { "id": "238", "name": "소공동", "type": "FILE", "user": "YS" },
+              {
+                "id": "254",
+                "name": "을지로동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              {
+                "id": "255",
+                "name": "황학동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "276",
+                "name": "광희동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "291", "name": "회현동", "type": "FILE", "user": "JY" },
+              { "id": "305", "name": "신당5동", "type": "FILE", "user": "YS" },
+              {
+                "id": "337",
+                "name": "다산동",
+                "type": "FILE",
+                "user": "Santiago"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1037",
+            "name": "중랑구",
+            "parentId": "1002",
+            "children": [],
+            "doList": [
+              { "id": "66", "name": "망우3동", "type": "FILE", "user": "JH" },
+              {
+                "id": "67",
+                "name": "망우본동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              {
+                "id": "68",
+                "name": "면목5동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "69", "name": "면목7동", "type": "FILE", "user": "MS" },
+              {
+                "id": "70",
+                "name": "상봉2동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "71",
+                "name": "신내1동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "129", "name": "면목본동", "type": "FILE", "user": "YS" },
+              {
+                "id": "167",
+                "name": "면목2동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "168", "name": "신내2동", "type": "FILE", "user": "MS" },
+              { "id": "194", "name": "묵1동", "type": "FILE", "user": "MS" },
+              {
+                "id": "217",
+                "name": "면목3.8동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "218",
+                "name": "중화1동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "239",
+                "name": "묵2동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "256",
+                "name": "중화2동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              { "id": "292", "name": "면목4동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "293",
+                "name": "상봉1동",
+                "type": "FILE",
+                "user": "Pierre"
+              }
+            ],
+            "hasTarget": false
+          }
+        ],
+        "doList": [],
+        "hasTarget": false
+      },
+      {
+        "id": "1001",
+        "name": "경기",
+        "parentId": "1000",
+        "children": [
+          {
+            "id": "1038",
+            "name": "과천",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              { "id": "363", "name": "과천동", "type": "FILE", "user": "MS" },
+              {
+                "id": "470",
+                "name": "별양동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "204",
+                "name": "부림동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "119",
+                "name": "중앙동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "675", "name": "갈현동", "type": "FILE", "user": "Admin" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1039",
+            "name": "광명",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              {
+                "id": "373",
+                "name": "광명5동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "374", "name": "철산3동", "type": "FILE", "user": "JY" },
+              {
+                "id": "422",
+                "name": "광명6동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "443",
+                "name": "광명7동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              {
+                "id": "444",
+                "name": "하안1동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              { "id": "472", "name": "광명2동", "type": "FILE", "user": "JY" },
+              { "id": "473", "name": "소하1동", "type": "FILE", "user": "YS" },
+              { "id": "488", "name": "광명3동", "type": "FILE", "user": "JH" },
+              {
+                "id": "489",
+                "name": "하안2동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "505", "name": "광명4동", "type": "FILE", "user": "SY" },
+              {
+                "id": "506",
+                "name": "소하2동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "507",
+                "name": "하안3동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "553",
+                "name": "하안4동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              { "id": "554", "name": "학온동", "type": "FILE", "user": "YS" },
+              {
+                "id": "686",
+                "name": "철산2동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "687",
+                "name": "광명1동",
+                "type": "FILE",
+                "user": "Charlie"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1040",
+            "name": "광주",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              { "id": "375", "name": "광남동", "type": "FILE", "user": "JY" },
+              {
+                "id": "423",
+                "name": "초월읍",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "577",
+                "name": "경안동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              {
+                "id": "612",
+                "name": "곤지암읍",
+                "type": "FILE",
+                "user": "Pierre"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1041",
+            "name": "구리",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              { "id": "385", "name": "수택1동", "type": "FILE", "user": "YS" },
+              {
+                "id": "386",
+                "name": "수택2동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              { "id": "387", "name": "수택3동", "type": "FILE", "user": "JH" },
+              {
+                "id": "426",
+                "name": "인창동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "530",
+                "name": "갈매동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "555",
+                "name": "교문1동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "556",
+                "name": "교문2동",
+                "type": "FILE",
+                "user": "Dhino"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1042",
+            "name": "군포",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              { "id": "388", "name": "궁내동", "type": "FILE", "user": "Pel" },
+              { "id": "389", "name": "재궁동", "type": "FILE", "user": "JY" },
+              {
+                "id": "427",
+                "name": "금정동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "476",
+                "name": "광정동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "492",
+                "name": "군포1동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              {
+                "id": "316",
+                "name": "대야동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "531",
+                "name": "산본1동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "557", "name": "군포2동", "type": "FILE", "user": "YS" },
+              {
+                "id": "558",
+                "name": "산본2동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "559",
+                "name": "수리동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "225", "name": "오금동", "type": "FILE", "user": "SY" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1043",
+            "name": "김포",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              {
+                "id": "393",
+                "name": "김포본동",
+                "type": "FILE",
+                "user": "Royd"
+              },
+              { "id": "428", "name": "사우동", "type": "FILE", "user": "JH" },
+              {
+                "id": "477",
+                "name": "양촌읍",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "494",
+                "name": "운양동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "508", "name": "장기동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "628",
+                "name": "구래동",
+                "type": "FILE",
+                "user": "Charlie"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1044",
+            "name": "남양주",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              {
+                "id": "396",
+                "name": "별내동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "397", "name": "별내면", "type": "FILE", "user": "JY" },
+              { "id": "454", "name": "양정동", "type": "FILE", "user": "MS" },
+              {
+                "id": "478",
+                "name": "와부읍",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "510",
+                "name": "조안면",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "534",
+                "name": "진건읍",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "564",
+                "name": "진접읍",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "595",
+                "name": "퇴계원면",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "631", "name": "평내동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "664",
+                "name": "화도읍",
+                "type": "FILE",
+                "user": "Santiago"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1045",
+            "name": "동두천",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              { "id": "407", "name": "소요동", "type": "FILE", "user": "MS" },
+              {
+                "id": "433",
+                "name": "송내동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "638",
+                "name": "보산동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "676", "name": "생연2동", "type": "FILE", "user": "JH" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1046",
+            "name": "부천",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              {
+                "id": "480",
+                "name": "소사본동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "678", "name": "소사본3동", "type": "FILE", "user": "YS" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1047",
+            "name": "양주",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              { "id": "23", "name": "회천1동", "type": "FILE", "user": "JH" },
+              { "id": "24", "name": "회천2동", "type": "FILE", "user": "SY" },
+              { "id": "321", "name": "양주1동", "type": "FILE", "user": "JY" },
+              { "id": "342", "name": "장흥면", "type": "FILE", "user": "YS" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1048",
+            "name": "여주",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              { "id": "95", "name": "능서면", "type": "FILE", "user": "JY" },
+              {
+                "id": "119",
+                "name": "중앙동",
+                "type": "FILE",
+                "user": "Gasfard"
+              }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1049",
+            "name": "오산",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              { "id": "322", "name": "대원동", "type": "FILE", "user": "MS" },
+              { "id": "333", "name": "세마동", "type": "FILE", "user": "JY" },
+              { "id": "343", "name": "신장동", "type": "FILE", "user": "Pel" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1050",
+            "name": "의왕",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              {
+                "id": "304",
+                "name": "고천동",
+                "type": "FILE",
+                "user": "Pierre"
+              },
+              {
+                "id": "324",
+                "name": "내손1동",
+                "type": "FILE",
+                "user": "Admin"
+              },
+              { "id": "334", "name": "부곡동", "type": "FILE", "user": "SY" },
+              { "id": "335", "name": "오전동", "type": "FILE", "user": "Admin" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1051",
+            "name": "의정부",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              {
+                "id": "58",
+                "name": "녹양동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "59",
+                "name": "호원1동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "103",
+                "name": "송산1동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "125",
+                "name": "송산2동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "126", "name": "호원2동", "type": "FILE", "user": "Pel" },
+              {
+                "id": "149",
+                "name": "신곡1동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "190",
+                "name": "신곡2동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "237",
+                "name": "의정부1동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "274",
+                "name": "의정부2동",
+                "type": "FILE",
+                "user": "Santiago"
+              },
+              {
+                "id": "325",
+                "name": "의정부3동",
+                "type": "FILE",
+                "user": "YS"
+              },
+              {
+                "id": "336",
+                "name": "장암동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              { "id": "344", "name": "가능1동", "type": "FILE", "user": "Royd" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1052",
+            "name": "이천",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              { "id": "150", "name": "부발읍", "type": "FILE", "user": "JH" },
+              { "id": "164", "name": "신둔면", "type": "FILE", "user": "Pel" },
+              { "id": "191", "name": "중리동", "type": "FILE", "user": "JH" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1053",
+            "name": "파주",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              {
+                "id": "72",
+                "name": "금촌2동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "73", "name": "문산읍", "type": "FILE", "user": "MS" },
+              {
+                "id": "130",
+                "name": "운정1동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "169", "name": "운정2동", "type": "FILE", "user": "JH" },
+              {
+                "id": "170",
+                "name": "운정3동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "219", "name": "월롱면", "type": "FILE", "user": "JY" },
+              {
+                "id": "240",
+                "name": "파주읍",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "306", "name": "광탄면", "type": "FILE", "user": "MS" },
+              { "id": "328", "name": "교하동", "type": "FILE", "user": "JH" },
+              { "id": "338", "name": "금촌1동", "type": "FILE", "user": "JH" },
+              { "id": "681", "name": "장단면", "type": "FILE", "user": "JH" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1054",
+            "name": "평택",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              {
+                "id": "257",
+                "name": "서정동",
+                "type": "FILE",
+                "user": "Gasfard"
+              },
+              {
+                "id": "294",
+                "name": "세교동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              {
+                "id": "195",
+                "name": "신장2동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              { "id": "307", "name": "원평동", "type": "FILE", "user": "Royd" },
+              { "id": "339", "name": "진위면", "type": "FILE", "user": "SY" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1055",
+            "name": "하남",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              { "id": "107", "name": "덕풍3동", "type": "FILE", "user": "SY" },
+              { "id": "131", "name": "신장1동", "type": "FILE", "user": "MS" },
+              {
+                "id": "195",
+                "name": "신장2동",
+                "type": "FILE",
+                "user": "Charlie"
+              },
+              {
+                "id": "258",
+                "name": "초이동",
+                "type": "FILE",
+                "user": "Dhino"
+              },
+              { "id": "259", "name": "풍산동", "type": "FILE", "user": "SY" },
+              { "id": "340", "name": "감북동", "type": "FILE", "user": "Admin" }
+            ],
+            "hasTarget": false
+          },
+          {
+            "id": "1056",
+            "name": "화성",
+            "parentId": "1001",
+            "children": [],
+            "doList": [
+              { "id": "260", "name": "동탄3동", "type": "FILE", "user": "YS" },
+              { "id": "277", "name": "매송면", "type": "FILE", "user": "JY" },
+              { "id": "295", "name": "진안동", "type": "FILE", "user": "JY" }
+            ],
+            "hasTarget": false
+          }
+        ],
+        "doList": [],
+        "hasTarget": false
+      }
+    ],
+    "doList": [],
+    "hasTarget": true
+  }
+}

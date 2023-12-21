@@ -1,0 +1,1 @@
+{"meta":{"learningDate":[2023,10,13,15,26],"applyDate":[2023,10,13,15,26],"method":"Relation","algorithm":["CosineSimilarity"]},"nodes":[{"id":"179","name":"호원1동","type":"FILE","user":"JY"},{"id":"602","name":"의정부3동","type":"FILE","user":"Santiago"}],"edges":[{"sourceNodeId":"179","targetNodeId":"602","score":0.012637868}]}

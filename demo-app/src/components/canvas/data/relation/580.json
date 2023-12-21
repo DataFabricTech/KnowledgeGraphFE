@@ -1,0 +1,1 @@
+{"meta":{"learningDate":[2023,10,13,15,26],"applyDate":[2023,10,13,15,26],"method":"Relation","algorithm":["CosineSimilarity"]},"nodes":[{"id":"44","name":"가산동","type":"FILE","user":"SY"},{"id":"580","name":"부평4동","type":"FILE","user":"Royd"}],"edges":[{"sourceNodeId":"44","targetNodeId":"580","score":0.032628678}]}

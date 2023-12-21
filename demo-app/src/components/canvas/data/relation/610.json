@@ -1,0 +1,1 @@
+{"meta":{"learningDate":[2023,10,13,15,26],"applyDate":[2023,10,13,15,26],"method":"Relation","algorithm":["CosineSimilarity"]},"nodes":[{"id":"4","name":"서교동","type":"FILE","user":"Pel"},{"id":"610","name":"금촌1동","type":"FILE","user":"YS"}],"edges":[{"sourceNodeId":"4","targetNodeId":"610","score":0.012063419}]}

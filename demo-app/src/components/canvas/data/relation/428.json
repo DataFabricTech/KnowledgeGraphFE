@@ -1,0 +1,1 @@
+{"meta":{"learningDate":[2023,10,13,15,26],"applyDate":[2023,10,13,15,26],"method":"Relation","algorithm":["CosineSimilarity"]},"nodes":[{"id":"244","name":"서울시외","type":"FILE","user":"Santiago"},{"id":"428","name":"별내면","type":"FILE","user":"JH"}],"edges":[{"sourceNodeId":"244","targetNodeId":"428","score":0.09214155}]}

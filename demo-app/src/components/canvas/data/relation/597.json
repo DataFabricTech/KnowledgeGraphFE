@@ -1,0 +1,1 @@
+{"meta":{"learningDate":[2023,10,13,15,26],"applyDate":[2023,10,13,15,26],"method":"Relation","algorithm":["CosineSimilarity"]},"nodes":[{"id":"523","name":"고양동","type":"FILE","user":"Pel"},{"id":"597","name":"원신동","type":"FILE","user":"Santiago"}],"edges":[{"sourceNodeId":"523","targetNodeId":"597","score":0.012982537}]}

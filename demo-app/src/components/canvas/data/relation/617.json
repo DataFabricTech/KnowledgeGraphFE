@@ -1,0 +1,1 @@
+{"meta":{"learningDate":[2023,10,13,15,26],"applyDate":[2023,10,13,15,26],"method":"Relation","algorithm":["CosineSimilarity"]},"nodes":[{"id":"519","name":"산본1동","type":"FILE","user":"YS"},{"id":"617","name":"산본2동","type":"FILE","user":"SY"}],"edges":[{"sourceNodeId":"519","targetNodeId":"617","score":0.013901655}]}
