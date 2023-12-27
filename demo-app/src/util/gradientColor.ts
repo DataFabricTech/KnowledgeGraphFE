@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 
-export const getInterpolator = (
+export const getColorInterpolator = (
   infos: { color: string; value: number }[],
   step = 0
 ) => {

@@ -7,7 +7,7 @@ import { getRelationData } from "@/components/canvas/data/getData";
 import { convertRelation } from "@/components/canvas/data/convert";
 import { RootStore } from "./rootStore";
 import { makeAutoObservable, toJS } from "mobx";
-import { getInterpolator } from "@/util/gradientColor";
+import { getColorInterpolator } from "@/util/gradientColor";
 
 export class RelationVisualizationStore implements Visualization {
   private _root: RootStore;
@@ -405,7 +405,7 @@ export class RelationVisualizationStore implements Visualization {
   zoomToFit() {}
 }
 
-const interpolator = getInterpolator([
+const interpolator = getColorInterpolator([
   { color: "#E4F1F7", value: 0 },
   { color: "#6CB0D6", value: 0.5 },
   { color: "#0D4A70", value: 1 },
