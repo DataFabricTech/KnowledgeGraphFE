@@ -183,6 +183,11 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.12.tgz#12bb1e2be27293c1406acb6af1c3f3a1481d98c6"
   integrity sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==
 
+"@types/rbush@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@types/rbush/-/rbush-3.0.3.tgz#f7ba6bc940e0913678f5df119e7a7803f1842ece"
+  integrity sha512-lX55lR0iYCgapxD3IrgujpQA1zDxwZI5qMRelKvmKAsSMplFVr7wmMpG7/6+Op2tjrgEex8o3vjg8CRDrRNYxg==
+
 "@types/react-dom@^18":
   version "18.3.0"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.3.0.tgz#0cbc818755d87066ab6ca74fbedb2547d74a82b0"
