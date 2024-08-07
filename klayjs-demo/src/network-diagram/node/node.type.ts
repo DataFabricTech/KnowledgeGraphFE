@@ -28,12 +28,7 @@ export interface NetworkDiagramNode<
 
   renderOffscreen(scale: number): void;
 
-  draw(
-    ctx: CanvasRenderingContext2D,
-    scale: number,
-    offsetX: number,
-    offsetY: number
-  ): void;
+  draw(ctx: CanvasRenderingContext2D, scale: number): void;
 
   // drawEventLayer(
   //   ctx: CanvasRenderingContext2D,
