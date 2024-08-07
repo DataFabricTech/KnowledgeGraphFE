@@ -34,19 +34,14 @@ export class CircleNode implements NetworkDiagramNode {
   y: number;
   radius: number;
 
-  minX: number;
-  minY: number;
-  maxX: number;
-  maxY: number;
-
   private offscreenCanvas: OffscreenCanvas;
   private offscreenCtx: OffscreenCanvasRenderingContext2D;
 
   private label: string;
   private style: NetworkDiagramNodeStyle;
 
-  private focusStyle: Partial<NetworkDiagramNodeStyle>;
-  private activeStyle: Partial<NetworkDiagramNodeStyle>;
+  private _focusStyle: Partial<NetworkDiagramNodeStyle>;
+  private _activeStyle: Partial<NetworkDiagramNodeStyle>;
 
   private static circleDiff: number = 20;
 
@@ -73,19 +68,40 @@ export class CircleNode implements NetworkDiagramNode {
     this.radius = layout.width / 2;
 
     this.style = { ...DEFAULT_STYLE, ...style };
-    this.activeStyle = activeStyle;
-    this.focusStyle = focusStyle;
+    this._activeStyle = activeStyle;
+    this._focusStyle = focusStyle;
 
     this.label = layout.labels ? layout.labels[0].text || layout.id : layout.id;
-
-    this.minX = 0;
-    this.minY = 0;
-    this.maxX = 0;
-    this.maxY = 0;
 
     this.offscreenCanvas = new OffscreenCanvas(layout.width, layout.height);
     this.offscreenCtx = this.offscreenCanvas.getContext("2d")!;
     this.renderOffscreen(scale);
+  }
+  setStyle(style: Partial<NetworkDiagramNodeStyle>): void {
+    // throw new Error('Method not implemented.');
+  }
+  defaultStyle(): void {
+    // throw new Error('Method not implemented.');
+  }
+  activeStyle(): void {
+    // throw new Error('Method not implemented.');
+  }
+  focusStyle(): void {
+    // throw new Error('Method not implemented.');
+  }
+
+  get minX() {
+    return this.x - this.circleDiff;
+  }
+
+  get minY() {
+    return this.y - this.circleDiff;
+  }
+  get maxX() {
+    return this.x + this.width + this.circleDiff;
+  }
+  get maxY() {
+    return this.y + this.height + this.circleDiff;
   }
 
   private get circleDiff() {
@@ -174,11 +190,4 @@ export class CircleNode implements NetworkDiagramNode {
       this.offscreenCanvas.height
     );
   }
-
-  drawEventLayer(
-    ctx: CanvasRenderingContext2D,
-    scale: number,
-    offsetX: number,
-    offsetY: number
-  ) {}
 }
