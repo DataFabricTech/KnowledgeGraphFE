@@ -177,7 +177,7 @@ export class CircleNode implements NetworkDiagramNode {
     this.renderLabel();
   }
 
-  draw(ctx: CanvasRenderingContext2D) {
+  draw(ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D) {
     ctx.drawImage(
       this.offscreenCanvas,
       0,
