@@ -1,7 +1,13 @@
-import { NetworkDiagramEdgeLayout } from "../edge/edge.type";
-import { NetworkDiagramNodeLayout } from "../node/node.type";
+import {
+  NetworkDiagramEdgeLayout,
+  NetworkDiagramEdgeMeta,
+} from "../edge/edge.type";
+import {
+  NetworkDiagramNodeLayout,
+  NetworkDiagramNodeMeta,
+} from "../node/node.type";
 
-export type NetworkDiagramLayout = NetworkDiagramNodeLayout & {
-  children: NetworkDiagramLayout[];
-  edges: NetworkDiagramEdgeLayout;
+export type NetworkDiagramLayout = NetworkDiagramNodeMeta & {
+  children: NetworkDiagramNodeMeta[];
+  edges: NetworkDiagramEdgeMeta[];
 };

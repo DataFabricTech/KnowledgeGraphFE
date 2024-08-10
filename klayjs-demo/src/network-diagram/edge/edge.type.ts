@@ -6,6 +6,12 @@ export type NetworkDiagramEdgeLayout = RequiredKeys<
   "sections"
 >;
 
+export type NetworkDiagramEdgeMeta = NetworkDiagramEdgeLayout & {
+  style?: Partial<EdgeStyle>;
+  focusStyle?: Partial<EdgeStyle>;
+  activeStyle?: Partial<EdgeStyle>;
+};
+
 export type EdgeStyle = {
   color: string;
   weight: number;
