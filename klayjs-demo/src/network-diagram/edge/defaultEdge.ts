@@ -4,6 +4,7 @@ import {
   NetworkDiagramEdge,
   NetworkDiagramEdgeLayout,
 } from "./edge.type";
+import { Position } from "../index.type";
 
 const DEFAULT_STYLE: EdgeStyle = {
   color: "#000",
@@ -20,6 +21,7 @@ export class DefaultEdge implements NetworkDiagramEdge {
   layoutOptions?: LayoutOptions | undefined;
   sections: ElkEdgeSection[];
   private _style: EdgeStyle;
+  private _scale: number = 1;
 
   // private label: string = "";
 
@@ -65,8 +67,27 @@ export class DefaultEdge implements NetworkDiagramEdge {
     return section;
   }
 
-  draw(ctx: CanvasRenderingContext2D, scale: number): void {
+  isPointNearEdge(point: Position, threshold: number = 3) {
+    const A = this.section.startPoint;
+    const B = this.section.endPoint;
+    const C = point;
+
+    const numerator = Math.abs(
+      (B.y - A.y) * C.x - (B.x - A.x) * C.y + B.x * A.y - B.y * A.x
+    );
+    const denominator = Math.sqrt((B.y - A.y) ** 2 + (B.x - A.x) ** 2);
+    const distance = numerator / denominator;
+
+    return distance <= threshold * this._scale;
+  }
+
+  draw(
+    ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
+    scale: number
+  ): void {
     const section = this.section;
+
+    this._scale = scale;
     ctx.save();
 
     ctx.lineWidth = scale * this._style.weight;
