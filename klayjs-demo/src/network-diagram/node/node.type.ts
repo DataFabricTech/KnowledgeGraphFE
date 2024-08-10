@@ -7,6 +7,12 @@ export type NetworkDiagramNodeLayout = RequiredKeys<
   "width" | "height" | "x" | "y"
 >;
 
+export type NetworkDiagramNodeMeta = NetworkDiagramNodeLayout & {
+  style?: Partial<NetworkDiagramNodeStyle>;
+  focusStyle?: Partial<NetworkDiagramNodeStyle>;
+  activeStyle?: Partial<NetworkDiagramNodeStyle>;
+};
+
 export type NetworkDiagramNodeStyle = {
   fontSize: number;
   fontColor: string;
