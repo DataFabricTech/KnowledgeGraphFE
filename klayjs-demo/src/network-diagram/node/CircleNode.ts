@@ -12,7 +12,7 @@ import {
 } from "./node.type";
 
 const DEFAULT_STYLE: NetworkDiagramNodeStyle = {
-  fontSize: 14,
+  fontSize: 30,
   fontColor: "#fff",
   fontWeight: 500,
   backgroundColor: "blue",
@@ -43,7 +43,7 @@ export class CircleNode implements NetworkDiagramNode {
   private _focusStyle: Partial<NetworkDiagramNodeStyle>;
   private _activeStyle: Partial<NetworkDiagramNodeStyle>;
 
-  private static circleDiff: number = 20;
+  private static circleDiff: number = 10;
 
   private scale: number = 1;
 
@@ -66,6 +66,8 @@ export class CircleNode implements NetworkDiagramNode {
     this.width = layout.width;
     this.height = layout.height;
     this.radius = layout.width / 2;
+
+    this.scale = scale;
 
     this.style = { ...DEFAULT_STYLE, ...style };
     this._activeStyle = activeStyle;
@@ -158,8 +160,8 @@ export class CircleNode implements NetworkDiagramNode {
     this.offscreenCtx.textAlign = "center";
     this.offscreenCtx.fillText(
       this.label,
-      this.radius / 2,
-      this.radius / 2 - (this.style.fontSize * this.scale) / 2
+      this.radius + this.circleDiff,
+      this.radius + this.circleDiff + (this.style.fontSize * this.scale) / 3
     );
   }
 
@@ -167,8 +169,8 @@ export class CircleNode implements NetworkDiagramNode {
     this.scale = scale;
 
     this.offscreenCanvas = new OffscreenCanvas(
-      this.radius + this.circleDiff,
-      this.radius + this.circleDiff
+      this.radius * 2 + this.circleDiff * 2,
+      this.radius * 2 + this.circleDiff * 2
     );
 
     this.offscreenCtx = this.offscreenCanvas.getContext("2d")!;
@@ -184,8 +186,8 @@ export class CircleNode implements NetworkDiagramNode {
       0,
       this.offscreenCanvas.height,
       this.offscreenCanvas.height,
-      this.x - CircleNode.circleDiff * this.scale,
-      this.y - CircleNode.circleDiff * this.scale,
+      this.x - this.circleDiff,
+      this.y - this.circleDiff,
       this.offscreenCanvas.height,
       this.offscreenCanvas.height
     );
