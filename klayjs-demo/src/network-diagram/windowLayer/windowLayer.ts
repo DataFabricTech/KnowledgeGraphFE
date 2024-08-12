@@ -247,6 +247,20 @@ export class WindowLayer {
     this._scale = Math.max(this._minScale, Math.min(this._maxScale, scale));
   }
 
+  fitToWindow() {
+    this._scale = Math.min(
+      this._size.height / this._renderingLayer.size.height,
+      this._size.width / this._renderingLayer.size.width
+    );
+
+    this._position.x =
+      (this._size.width - this._renderingLayer.size.width * this._scale) / 2;
+    this._position.y =
+      (this._size.height - this._renderingLayer.size.height * this._scale) / 2;
+
+    this.render();
+  }
+
   render() {
     const graph = this._renderingLayer.offscreenCanvas;
     const ctx = this.windowCanvas.getContext("2d")!;
