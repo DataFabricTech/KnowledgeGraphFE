@@ -11,10 +11,12 @@ export const layoutDefault = async ({
   nodes,
   edges,
   scale,
+  nodeSpacing = 2,
 }: {
   nodes: NetworkDiagramNodeInfo[];
   edges: NetworkDiagramEdgeInfo[];
   scale: number;
+  nodeSpacing?: number;
 }) => {
   const graph = {
     id: "root",
@@ -25,7 +27,7 @@ export const layoutDefault = async ({
       // "elk.scalefactor": "1",
       //  "elk.incremental": "true"
       // "elk.fix": "true",
-      "elk.spacing.nodeNode": "10",
+      "elk.spacing.nodeNode": (20 * nodeSpacing).toFixed(),
       "elk.force.repulsiveForce": "5000",
     },
     children: nodes,
