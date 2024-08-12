@@ -63,7 +63,9 @@ export class RenderingLayer {
     if (nodeId) {
       return nodeId;
     }
-    return;
+
+    const edgeId = this._edgeRenderingModule.getElementId(position);
+    return edgeId;
   }
 
   get offscreenCanvas() {
