@@ -5,7 +5,6 @@ export const drawEdge = (
   edge: ElkExtendedEdge,
   scale: number = 1
 ) => {
-  console.log(scale);
   const section = edge.sections ? edge.sections[0] : undefined;
   if (!section) {
     return;

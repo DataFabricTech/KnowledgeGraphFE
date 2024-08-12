@@ -17,4 +17,4 @@ export type NetworkDiagramNodeInfo = Omit<
   "width" | "height" | "x" | "y"
 >;
 
-export type NetworkDiagramEdgeInfo = Omit<NetworkDiagramEdgeLayout, "section">;
+export type NetworkDiagramEdgeInfo = Omit<NetworkDiagramEdgeMeta, "sections">;
