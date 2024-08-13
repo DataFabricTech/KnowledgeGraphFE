@@ -10,6 +10,7 @@ export type EventHandler = {
 export class WindowLayer {
   private _windowElement: HTMLDivElement;
   private _windowCanvas: HTMLCanvasElement | null = null;
+  private _mapCanvas: HTMLCanvasElement | null = null;
   private _renderingLayer: RenderingLayer;
 
   private _dpiRatio: number = 2;
@@ -70,6 +71,13 @@ export class WindowLayer {
     return this._windowCanvas;
   }
 
+  private get mapCanvas() {
+    if (this._mapCanvas === null) {
+      throw Error("canvas가 없습니다.");
+    }
+    return this._mapCanvas;
+  }
+
   init() {
     this._windowElement.style.position = "relative";
     const canvas = document.createElement("canvas");
@@ -84,9 +92,10 @@ export class WindowLayer {
     this.detachEvent();
     this.attachEvent();
 
+    this.initMap();
     this.render();
 
-    this.renderZoomNav();
+    this.initZoomNav();
   }
   private getIdFromMouseEvent = (e: MouseEvent) => {
     const position = {
@@ -222,7 +231,7 @@ export class WindowLayer {
     const { x, y } = position;
     if (x) {
       const renderWidth = this._renderingLayer.size.width * this._scale;
-      const gap = renderWidth * 0.5;
+      const gap = Math.min(renderWidth, this._size.width) * 0.5;
 
       const maxX = Math.max(renderWidth, this._size.width) - gap;
       const minX = -renderWidth + gap;
@@ -232,7 +241,7 @@ export class WindowLayer {
 
     if (y) {
       const renderHeight = this._renderingLayer.size.height * this._scale;
-      const gap = renderHeight * 0.5;
+      const gap = Math.min(renderHeight, this._size.height) * 0.5;
       const maxY = Math.max(renderHeight, this._size.height) - gap;
       const minY = -renderHeight + gap;
       this._position.y = Math.max(minY, Math.min(maxY, y));
@@ -308,9 +317,64 @@ export class WindowLayer {
     ctx.drawImage(graph, 0, 0, graph.width, graph.height);
 
     ctx.restore();
+    this.renderMap();
   }
 
-  private renderZoomNav() {
+  private renderMap() {
+    const map = this.mapCanvas;
+
+    const ctx = map.getContext("2d")!;
+    ctx.save();
+    ctx.clearRect(0, 0, map.width, map.height);
+    const minMargin = 32;
+
+    const graph = this._renderingLayer.offscreenCanvas;
+
+    const scale = Math.min(
+      (map.width - minMargin * 2) / graph.width,
+      (map.height - minMargin * 2) / graph.height
+    );
+
+    const leftMargin = (map.width - graph.width * scale) / 2;
+    const topMargin = (map.height - graph.height * scale) / 2;
+
+    ctx.translate(leftMargin, topMargin);
+
+    ctx.scale(scale, scale);
+
+    ctx.drawImage(this._renderingLayer.offscreenCanvas, 0, 0);
+    ctx.restore();
+
+    const point = this.convertPointToRenderLayout({ x: 0, y: 0 });
+
+    const view = {
+      x: leftMargin + point.x * scale,
+      y: topMargin + point.y * scale,
+      width: (this._size.width * scale) / this._scale,
+      height: (this._size.height * scale) / this._scale,
+    };
+
+    ctx.fillStyle = "gray";
+    ctx.globalAlpha = 0.8;
+    // ctx.fillRect(view.x, view.y, view.width, view.height);
+
+    ctx.beginPath();
+    ctx.rect(0, 0, map.width, map.height);
+    ctx.rect(view.x, view.y, view.width, view.height);
+    ctx.stroke;
+    ctx.fillStyle = "gray";
+    ctx.globalAlpha = 0.5;
+    ctx.fill("evenodd");
+    ctx.globalAlpha = 1.0;
+
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(view.x, view.y, view.width, view.height);
+
+    ctx.restore();
+  }
+
+  private initZoomNav() {
     const nav = document.createElement("div");
     nav.style.position = "absolute";
     nav.style.bottom = "20px";
@@ -350,6 +414,23 @@ export class WindowLayer {
         this.fitToWindow();
         this.render();
       });
+  }
+
+  private initMap() {
+    const map = document.createElement("canvas");
+    map.style.position = "absolute";
+    map.style.bottom = "20px";
+    map.style.left = "72px";
+    map.style.width = "196px";
+    map.style.height = "128px";
+    map.style.background = "#fff";
+    map.style.border = "1px solid grey";
+
+    map.width = 392;
+    map.height = 256;
+
+    this._windowElement.appendChild(map);
+    this._mapCanvas = map;
   }
 }
 
