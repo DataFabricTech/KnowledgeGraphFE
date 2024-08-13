@@ -9,7 +9,10 @@ import { Position } from "../index.type";
 const DEFAULT_STYLE: EdgeStyle = {
   color: "#000",
   weight: 3,
-  isLabel: false,
+  isLabel: true,
+  fontSize: 12,
+  fontColor: "#000",
+  fontBackground: "#EAECF0",
 } as const;
 
 export class DefaultEdge implements NetworkDiagramEdge {
@@ -117,7 +120,38 @@ export class DefaultEdge implements NetworkDiagramEdge {
 
     ctx.stroke();
 
-    if (this._style.isLabel) {
+    if (this._style.isLabel && this.label) {
+      ctx.font = `${this._style.fontSize * scale}px serif`;
+      const metricsText = ctx.measureText(this.label);
+
+      ctx.globalAlpha = 0.7;
+
+      ctx.fillStyle = this._style.fontBackground;
+      ctx.fillRect(
+        (section.startPoint.x + section.endPoint.x) / 2 -
+          metricsText.width / 2 -
+          10,
+        (section.startPoint.y + section.endPoint.y) / 2 -
+          (this._style.fontSize * scale) / 2 -
+          10,
+        metricsText.width + 20,
+        this._style.fontSize * scale + 20
+      );
+
+      ctx.globalAlpha = 1;
+
+      ctx.beginPath();
+
+      ctx.fillStyle = this._style.fontColor;
+
+      ctx.textAlign = "center";
+
+      ctx.fillText(
+        this.label,
+        (section.startPoint.x + section.endPoint.x) / 2,
+        (section.startPoint.y + section.endPoint.y) / 2 +
+          (this._style.fontSize * scale) / 3
+      );
     }
 
     ctx.restore();

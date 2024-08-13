@@ -16,6 +16,9 @@ export type EdgeStyle = {
   color: string;
   weight: number;
   isLabel: boolean;
+  fontSize: number;
+  fontColor: string;
+  fontBackground: string;
 };
 
 export interface NetworkDiagramEdge extends NetworkDiagramEdgeLayout {
