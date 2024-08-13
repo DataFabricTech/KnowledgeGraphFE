@@ -262,10 +262,14 @@ export class WindowLayer {
   }
 
   scaleUp(dRatio: number = 1) {
-    this.setScale(this._scale + dRatio * 0.02);
+    const diffUnit = 0.02;
+    const diff = Math.max(diffUnit, this._scale * diffUnit * dRatio);
+    this.setScale(this._scale + diff);
   }
   scaleDown(dRatio: number = 1) {
-    this.setScale(this._scale - dRatio * 0.02);
+    const diffUnit = 0.02;
+    const diff = Math.max(diffUnit, this._scale * diffUnit * dRatio);
+    this.setScale(this._scale - diff);
   }
 
   private setScale(scale: number) {
