@@ -136,27 +136,16 @@ export class WindowLayer {
   private wheel = (e: WheelEvent) => {
     e.preventDefault();
 
-    // if (e.metaKey || e.ctrlKey) {
-    const worldX =
-      (e.offsetX * this._dpiRatio - this._position.x) / this._scale;
-
-    const worldY =
-      (e.offsetY * this._dpiRatio - this._position.y) / this._scale;
-
     if (e.deltaY > 0) {
-      this.scaleUp();
+      this.scaleUpWithPoint({
+        x: e.offsetX * this._dpiRatio,
+        y: e.offsetY * this._dpiRatio,
+      });
     }
     if (e.deltaY < 0) {
-      this.scaleDown();
-    }
-
-    // offsetX = (worldX / this._scale + this._position.x) * this._dpiRatio;
-
-    // offsetX * this._dpiRatio -   worldX * this._scale = (this._position.x +)
-
-    this.setPosition({
-      x: e.offsetX * this._dpiRatio - worldX * this._scale,
-      y: e.offsetY * this._dpiRatio - worldY * this._scale,
+      this.scaleDownWithPoint({
+        x: e.offsetX * this._dpiRatio,
+        y: e.offsetY * this._dpiRatio,
     });
 
     this.render();
@@ -234,6 +223,28 @@ export class WindowLayer {
       const minY = -renderHeight + gap;
       this._position.y = Math.max(minY, Math.min(maxY, y));
     }
+  }
+
+  scaleUpWithPoint(point: Position, dRatio?: number) {
+    const worldX = (point.x - this._position.x) / this._scale;
+    const worldY = (point.y - this._position.y) / this._scale;
+
+    this.scaleUp(dRatio);
+
+    this.setPosition({
+      x: point.x - worldX * this._scale,
+      y: point.y - worldY * this._scale,
+    });
+  }
+
+  scaleDownWithPoint(point: Position, dRatio: number = 1) {
+    const worldX = (point.x - this._position.x) / this._scale;
+    const worldY = (point.y - this._position.y) / this._scale;
+
+    this.scaleDown(dRatio);
+
+    this._position.x = point.x - worldX * this._scale;
+    this._position.y = point.y - worldY * this._scale;
   }
 
   scaleUp(dRatio: number = 1) {
