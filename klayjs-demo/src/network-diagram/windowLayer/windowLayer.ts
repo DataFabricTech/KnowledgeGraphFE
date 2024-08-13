@@ -8,6 +8,7 @@ export type EventHandler = {
 };
 
 export class WindowLayer {
+  private _windowElement: HTMLDivElement;
   private _windowCanvas: HTMLCanvasElement | null = null;
   private _renderingLayer: RenderingLayer;
 
@@ -24,12 +25,14 @@ export class WindowLayer {
   private _spaceHold = false;
 
   constructor({
-    canvasElement,
+    windowElement,
+
     eventHandler = {},
     renderingLayer,
     scale,
   }: {
-    canvasElement?: HTMLCanvasElement;
+    windowElement: HTMLDivElement;
+
     eventHandler?: Partial<EventHandler>;
     renderingLayer: RenderingLayer;
     scale: number;
@@ -43,9 +46,9 @@ export class WindowLayer {
       ...eventHandler,
     };
 
-    if (canvasElement) {
-      this.setElement(canvasElement);
-    }
+    this._windowElement = windowElement;
+
+    this.init();
   }
 
   private convertPointToRenderLayout(point: Position) {
@@ -67,14 +70,23 @@ export class WindowLayer {
     return this._windowCanvas;
   }
 
-  setElement(element: HTMLCanvasElement) {
-    this._windowCanvas = element;
+  init() {
+    this._windowElement.style.position = "relative";
+    const canvas = document.createElement("canvas");
+    canvas.setAttribute("style", "width: 100%; height: 100%");
+
+    this._windowElement.appendChild(canvas);
+
+    this._windowCanvas = canvas;
+
     this.resizeCanvas();
 
     this.detachEvent();
     this.attachEvent();
 
     this.render();
+
+    this.renderZoomNav();
   }
   private getIdFromMouseEvent = (e: MouseEvent) => {
     const position = {
@@ -146,13 +158,15 @@ export class WindowLayer {
       this.scaleDownWithPoint({
         x: e.offsetX * this._dpiRatio,
         y: e.offsetY * this._dpiRatio,
-    });
+      });
+    }
 
     this.render();
     // }
   };
 
   private keydown = (e: KeyboardEvent) => {
+    if (e.shiftKey && e.key === "!") this.fitToWindow();
     if (e.keyCode === 32) {
       this._spaceHold = true;
     }
@@ -291,4 +305,40 @@ export class WindowLayer {
 
     ctx.restore();
   }
+
+  private renderZoomNav() {
+    const nav = document.createElement("div");
+    nav.style.position = "absolute";
+    nav.style.bottom = "20px";
+    nav.style.left = "20px";
+    nav.style.border = "1px solid grey";
+    nav.style.display = "flex";
+    nav.style.flexDirection = "column";
+    nav.style.background = "#fff";
+
+    nav.innerHTML = `
+      <button class="graph_nav_plus_btn" style="color: #000; width: 32px; height: 32px; border: none; outline: none; background-color: inherit; cursor: pointer;">${plus}</button>
+      <button class="graph_nav_minus_btn" style="color: #000; width: 32px; height: 32px; border: none; outline: none; background-color: inherit; cursor: pointer;">${minus}</button>
+      <button class="graph_nav_fullscreen_btn" style="color: #000; width: 32px; height: 32px; border: none; outline: none; background-color: inherit; cursor: pointer;">${fullscreen}</button>
+    `;
+
+    this._windowElement.appendChild(nav);
+
+    console.log(nav.getElementsByClassName("graph_nav_plus_btn")[0]);
+
+    nav
+      .getElementsByClassName("graph_nav_plus_btn")[0]
+      ?.addEventListener("click", () => {
+        this.scaleUpWithPoint(
+          { x: this._size.width / 2, y: this._size.height / 2 },
+          15
+        );
+
+        this.render();
+      });
+  }
 }
+
+const plus = `<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159ZM4.25 6.5C4.25 6.22386 4.47386 6 4.75 6H6V4.75C6 4.47386 6.22386 4.25 6.5 4.25C6.77614 4.25 7 4.47386 7 4.75V6H8.25C8.52614 6 8.75 6.22386 8.75 6.5C8.75 6.77614 8.52614 7 8.25 7H7V8.25C7 8.52614 6.77614 8.75 6.5 8.75C6.22386 8.75 6 8.52614 6 8.25V7H4.75C4.47386 7 4.25 6.77614 4.25 6.5Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>`;
+const minus = `<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10C8.433 10 10 8.433 10 6.5C10 4.567 8.433 3 6.5 3C4.567 3 3 4.567 3 6.5C3 8.433 4.567 10 6.5 10ZM6.5 11C7.56251 11 8.53901 10.6318 9.30884 10.0159L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L10.0159 9.30884C10.6318 8.53901 11 7.56251 11 6.5C11 4.01472 8.98528 2 6.5 2C4.01472 2 2 4.01472 2 6.5C2 8.98528 4.01472 11 6.5 11ZM4.75 6C4.47386 6 4.25 6.22386 4.25 6.5C4.25 6.77614 4.47386 7 4.75 7H8.25C8.52614 7 8.75 6.77614 8.75 6.5C8.75 6.22386 8.52614 6 8.25 6H4.75Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>`;
+const fullscreen = `<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0.75L9.75 3H5.25L7.5 0.75ZM7.5 14.25L9.75 12H5.25L7.5 14.25ZM3 5.25L0.75 7.5L3 9.75V5.25ZM14.25 7.5L12 5.25V9.75L14.25 7.5Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>`;

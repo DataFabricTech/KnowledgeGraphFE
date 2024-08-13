@@ -7,7 +7,7 @@ import { RenderingLayer } from "./renderingLayer/renderingLayer";
 import { EventHandler, WindowLayer } from "./windowLayer/windowLayer";
 
 export class NetworkDiagram {
-  private _container: HTMLCanvasElement;
+  private _container: HTMLDivElement;
   private _scale: number;
   private _window?: WindowLayer;
   private _renderingLayer?: RenderingLayer;
@@ -18,7 +18,7 @@ export class NetworkDiagram {
     edges,
     eventHandler,
   }: {
-    container: HTMLCanvasElement;
+    container: HTMLDivElement;
     nodes: NetworkDiagramNodeInfo[];
     edges: NetworkDiagramEdgeInfo[];
     eventHandler?: Partial<EventHandler>;
@@ -48,7 +48,7 @@ export class NetworkDiagram {
       renderingLayer: this._renderingLayer,
       scale: this._scale,
       eventHandler,
-      canvasElement: this._container,
+      windowElement: this._container,
     });
   }
 
