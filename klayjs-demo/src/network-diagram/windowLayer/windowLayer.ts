@@ -324,16 +324,26 @@ export class WindowLayer {
 
     this._windowElement.appendChild(nav);
 
-    console.log(nav.getElementsByClassName("graph_nav_plus_btn")[0]);
+    nav.querySelector(".graph_nav_plus_btn")?.addEventListener("click", () => {
+      this.scaleUpWithPoint(
+        { x: this._size.width / 2, y: this._size.height / 2 },
+        15
+      );
+      this.render();
+    });
+
+    nav.querySelector(".graph_nav_minus_btn")?.addEventListener("click", () => {
+      this.scaleDownWithPoint(
+        { x: this._size.width / 2, y: this._size.height / 2 },
+        15
+      );
+      this.render();
+    });
 
     nav
-      .getElementsByClassName("graph_nav_plus_btn")[0]
+      .querySelector(".graph_nav_fullscreen_btn")
       ?.addEventListener("click", () => {
-        this.scaleUpWithPoint(
-          { x: this._size.width / 2, y: this._size.height / 2 },
-          15
-        );
-
+        this.fitToWindow();
         this.render();
       });
   }
