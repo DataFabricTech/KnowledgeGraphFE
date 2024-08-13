@@ -24,6 +24,8 @@ export const layoutDefault = async ({
       // "elk.algorithm": "layered",
       // "elk.algorithm": "radial",
       "elk.algorithm": "force",
+      "elk.force.model": "FRUCHTERMAN_REINGOLD",
+      // "elk.direction": "right",
       // "elk.scalefactor": "1",
       //  "elk.incremental": "true"
       // "elk.fix": "true",

@@ -41,6 +41,21 @@ export class RenderingLayer {
     this.render();
   }
 
+  get nodeModule() {
+    return this._nodeRenderingModule;
+  }
+
+  get edgeModule() {
+    return this._edgeRenderingModule;
+  }
+
+  setSize(size: { width: number; height: number }) {
+    this._size = size;
+    this._offscreenCanvas = new OffscreenCanvas(size.width, size.height);
+    this._nodeRenderingModule.setSize(size);
+    this._edgeRenderingModule.setSize(size);
+  }
+
   render(scale?: number) {
     if (scale) {
       this._scale = scale;

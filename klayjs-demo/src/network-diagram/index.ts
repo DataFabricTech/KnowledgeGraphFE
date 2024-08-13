@@ -52,6 +52,46 @@ export class NetworkDiagram {
     });
   }
 
+  async addElement({
+    nodes,
+    edges,
+  }: {
+    nodes: NetworkDiagramNodeInfo[];
+    edges: NetworkDiagramEdgeInfo[];
+  }) {
+    if (!this._renderingLayer) {
+      throw Error("init 실행되지 않음.");
+    }
+
+    const layout = await layoutDefault({
+      scale: this._scale,
+      nodes: [
+        ...this._renderingLayer.nodeModule.nodes.map((node) => node.layout),
+        ...nodes,
+      ],
+      edges: [
+        ...this._renderingLayer.edgeModule.edges.map((node) => node.layout),
+        ...edges,
+      ],
+    });
+
+    this._renderingLayer.nodeModule.nodes.forEach((node) =>
+      node.adjustScale(this._scale)
+    );
+
+    this._renderingLayer.nodeModule.addNodes(nodes as any);
+    this._renderingLayer.edgeModule.addEdges(edges as any);
+
+    this._renderingLayer.setSize({
+      width: layout.width,
+      height: layout.height,
+    });
+    this._renderingLayer.nodeModule.render();
+    this._renderingLayer.edgeModule.render();
+    this._renderingLayer.render();
+    this._window?.render();
+  }
+
   cleanUp() {
     this._window?.detachEvent();
   }

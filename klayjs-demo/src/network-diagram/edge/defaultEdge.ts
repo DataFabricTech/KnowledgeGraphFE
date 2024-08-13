@@ -13,15 +13,13 @@ const DEFAULT_STYLE: EdgeStyle = {
 } as const;
 
 export class DefaultEdge implements NetworkDiagramEdge {
-  sources: string[];
-  targets: string[];
-  id: string;
   junctionPoints?: ElkPoint[] | undefined;
-  labels?: ElkLabel[] | undefined;
+
   layoutOptions?: LayoutOptions | undefined;
-  sections: ElkEdgeSection[];
+
   private _style: EdgeStyle;
   private _scale: number = 1;
+  private _layout: NetworkDiagramEdgeLayout;
 
   // private label: string = "";
 
@@ -32,13 +30,26 @@ export class DefaultEdge implements NetworkDiagramEdge {
     layout: NetworkDiagramEdgeLayout;
     style?: Partial<EdgeStyle>;
   }) {
-    this.sources = layout.sources;
-    this.targets = layout.targets;
-    this.id = layout.id;
-    this.labels = layout.labels;
-    this.sections = layout.sections;
+    this._layout = layout;
 
     this._style = { ...DEFAULT_STYLE, ...style };
+  }
+
+  get sources() {
+    return this._layout.sources;
+  }
+
+  get targets() {
+    return this._layout.targets;
+  }
+  get id() {
+    return this._layout.id;
+  }
+  get labels() {
+    return this._layout.labels;
+  }
+  get sections() {
+    return this._layout.sections;
   }
   setStyle(style: Partial<EdgeStyle>): void {
     this._style = { ...this._style, ...style };
@@ -50,6 +61,10 @@ export class DefaultEdge implements NetworkDiagramEdge {
       return "";
     }
     return this.labels[0].text || "";
+  }
+
+  get layout() {
+    return this._layout;
   }
   defaultStyle(): void {
     // throw new Error("Method not implemented.");

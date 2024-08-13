@@ -18,21 +18,15 @@ const DEFAULT_STYLE: NetworkDiagramNodeStyle = {
   backgroundColor: "blue",
   outlineColor: "#000",
   outlineWeight: 2,
-  outlineDiff: 0,
+  outlineDiff: 4,
 } as const;
 
 export class CircleNode implements NetworkDiagramNode {
-  id: string;
   children?: ElkNode[] | undefined;
   ports?: ElkPort[] | undefined;
   edges?: ElkExtendedEdge[] | undefined;
   labels?: ElkLabel[] | undefined;
   layoutOptions?: LayoutOptions | undefined;
-  width: number;
-  height: number;
-  x: number;
-  y: number;
-  radius: number;
 
   private offscreenCanvas: OffscreenCanvas;
   private offscreenCtx: OffscreenCanvasRenderingContext2D;
@@ -47,6 +41,8 @@ export class CircleNode implements NetworkDiagramNode {
 
   private scale: number = 1;
 
+  private _layout: NetworkDiagramNodeLayout;
+
   constructor({
     layout,
     scale = 1,
@@ -60,12 +56,10 @@ export class CircleNode implements NetworkDiagramNode {
     focusStyle?: Partial<NetworkDiagramNodeStyle>;
     activeStyle?: Partial<NetworkDiagramNodeStyle>;
   }) {
-    this.id = layout.id;
-    this.x = layout.x;
-    this.y = layout.y;
-    this.width = layout.width;
-    this.height = layout.height;
-    this.radius = layout.width / 2;
+    this._layout = layout;
+
+    this._layout.width = this._layout.width / scale;
+    this._layout.height = this._layout.height / scale;
 
     this.scale = scale;
 
@@ -79,6 +73,34 @@ export class CircleNode implements NetworkDiagramNode {
     this.offscreenCtx = this.offscreenCanvas.getContext("2d")!;
     this.renderOffscreen(scale);
   }
+
+  get id() {
+    return this._layout.id;
+  }
+  get x() {
+    return this._layout.x;
+  }
+  get y() {
+    return this._layout.y;
+  }
+  get width() {
+    return this._layout.width * this.scale;
+  }
+  get height() {
+    return this._layout.height * this.scale;
+  }
+  get radius() {
+    return (this._layout.height / 2) * this.scale;
+  }
+
+  get layout() {
+    return this._layout;
+  }
+  adjustScale(scale: number) {
+    this._layout.width /= scale;
+    this._layout.height /= scale;
+  }
+
   setStyle(style: Partial<NetworkDiagramNodeStyle>): void {
     // throw new Error('Method not implemented.');
   }
@@ -107,7 +129,7 @@ export class CircleNode implements NetworkDiagramNode {
   }
 
   private get circleDiff() {
-    return this.scale * CircleNode.circleDiff;
+    return this.height * 0.12;
   }
 
   private renderCircle() {
@@ -124,7 +146,22 @@ export class CircleNode implements NetworkDiagramNode {
       0,
       Math.PI * 2,
       false
-    ); // x, y, radius, startAngle, endAngle, counterclockwise
+    );
+    ctx.fillStyle = "#fff";
+    ctx.fill();
+
+    ctx.beginPath();
+
+    ctx.arc(
+      this.radius + this.circleDiff,
+      this.radius + this.circleDiff,
+      this.radius +
+        this.circleDiff -
+        (this.style.outlineWeight + this.style.outlineDiff) * this.scale,
+      0,
+      Math.PI * 2,
+      false
+    );
     ctx.fillStyle = this.style.backgroundColor;
     ctx.fill();
   }
@@ -136,15 +173,17 @@ export class CircleNode implements NetworkDiagramNode {
     ctx.arc(
       this.radius + this.circleDiff,
       this.radius + this.circleDiff,
-      this.radius + this.circleDiff,
+      this.radius +
+        this.circleDiff -
+        (this.style.outlineWeight * this.scale) / 2,
       0,
       Math.PI * 2,
       false
     );
-    ctx.fillStyle = "green";
-    ctx.fill();
-    ctx.lineWidth = 3;
-    ctx.strokeStyle = "black";
+    // ctx.fillStyle = "green";
+    // ctx.fill();
+    ctx.lineWidth = this.style.outlineWeight * this.scale;
+    ctx.strokeStyle = this.style.outlineColor;
     ctx.stroke();
   }
 
@@ -177,6 +216,7 @@ export class CircleNode implements NetworkDiagramNode {
 
     this.renderCircle();
     this.renderLabel();
+    this.renderOutLine();
   }
 
   draw(ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D) {

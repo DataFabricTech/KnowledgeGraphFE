@@ -35,6 +35,24 @@ export class EdgeRenderingModule implements RenderingModule {
     });
   }
 
+  addEdges(edges: NetworkDiagramEdgeMeta[]) {
+    edges.forEach((meta) => {
+      const edge = new DefaultEdge({
+        layout: meta,
+        style: meta.style,
+      });
+      this._edges.push(edge);
+    });
+  }
+
+  get edges() {
+    return this._edges;
+  }
+
+  setSize(size: Size) {
+    this._offscreenCanvas = new OffscreenCanvas(size.width, size.height);
+  }
+
   getElementId(position: Position): string | undefined {
     const ctx = this._offscreenCanvas.getContext("2d")!;
 

@@ -38,10 +38,32 @@ export class NodeRenderingModule implements RenderingModule {
         scale: scale,
       });
 
-      this._rTree.insert(node);
-
       return node;
     });
+    this._rTree.load(this._nodes);
+  }
+
+  get nodes() {
+    return this._nodes;
+  }
+
+  addNodes(nodes: NetworkDiagramNodeMeta[]) {
+    nodes.forEach((meta) => {
+      const node = new CircleNode({
+        layout: meta,
+        focusStyle: meta.focusStyle,
+        style: meta.style,
+        activeStyle: meta.activeStyle,
+        scale: this._scale,
+      });
+
+      this._nodes.push(node);
+    });
+    this._rTree = new NodeRTree();
+
+    this._rTree.load(this._nodes);
+
+    console.log(this._nodes);
   }
 
   getElementId(position: Position): string | undefined {
@@ -63,6 +85,9 @@ export class NodeRenderingModule implements RenderingModule {
   get offscreenCanvas() {
     return this._offscreenCanvas;
   }
+  setSize(size: Size) {
+    this._offscreenCanvas = new OffscreenCanvas(size.width, size.height);
+  }
 
   render(scale?: number): void {
     if (scale) {
@@ -78,6 +103,7 @@ export class NodeRenderingModule implements RenderingModule {
     );
 
     this._nodes.forEach((node) => {
+      console.log(node.x, node.y);
       node.draw(ctx);
     });
   }
