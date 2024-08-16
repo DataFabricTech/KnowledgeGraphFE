@@ -53,6 +53,7 @@ export class WindowLayer {
   }) {
     this._renderingLayer = renderingLayer;
     this._scale = 1 / Math.sqrt(scale);
+
     this._eventHandler = {
       onClick: () => {},
       onCtxClick: () => {},
@@ -286,6 +287,7 @@ export class WindowLayer {
   scaleUp(dRatio: number = 2) {
     const diffUnit = 0.01;
     const diff = Math.max(diffUnit, this._scale * diffUnit * dRatio);
+
     this.setScale(this._scale + diff);
   }
   scaleDown(dRatio: number = 2) {
@@ -313,6 +315,15 @@ export class WindowLayer {
   }
 
   render() {
+    if (this._isRender) {
+      return;
+    }
+    this._isRender = true;
+
+    requestAnimationFrame(() => {
+      this._isRender = false;
+    });
+
     const graph = this._renderingLayer.offscreenCanvas;
     const ctx = this.windowCanvas.getContext("2d")!;
     ctx.save();
