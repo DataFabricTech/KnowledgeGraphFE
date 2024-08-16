@@ -6,6 +6,7 @@ import {
 } from "../layout/layout.type";
 import { NetworkDiagramNodeStyle } from "../node/node.type";
 import { EventHandler } from "../windowLayer/windowLayer";
+import { PixelQuality } from "../index.type";
 
 export type CategoryNode = {
   id: string;
@@ -34,10 +35,10 @@ const _convert = (
   level: number,
   parentId?: string
 ) => {
-  if (level > 2) {
-    return;
-  }
-  if (nodes.length > 50) {
+  // if (level > 3) {
+  //   return;
+  // }
+  if (nodes.length > 100) {
     return;
   }
 
@@ -86,18 +87,21 @@ export class CategoryGraph {
     container,
     categoryData,
     eventHandler,
+    pixelQuality,
   }: {
     container: HTMLDivElement;
     categoryData: Category;
     eventHandler?: Partial<EventHandler>;
+    pixelQuality?: PixelQuality;
   }) {
     const { nodes, edges } = convert(categoryData);
-    console.log(nodes);
+
     this._diagram = new NetworkDiagram({
       container,
       eventHandler,
       nodes,
       edges,
+      pixelQuality,
     });
   }
 

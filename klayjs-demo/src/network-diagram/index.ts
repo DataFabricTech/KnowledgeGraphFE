@@ -1,3 +1,4 @@
+import { PixelQuality } from "./index.type";
 import { layoutDefault } from "./layout/layout";
 import {
   NetworkDiagramEdgeInfo,
@@ -5,6 +6,12 @@ import {
 } from "./layout/layout.type";
 import { RenderingLayer } from "./renderingLayer/renderingLayer";
 import { EventHandler, WindowLayer } from "./windowLayer/windowLayer";
+
+const QUALITY_SCALE_MAP = {
+  low: 1,
+  middle: 2,
+  high: 4,
+} as const;
 
 export class NetworkDiagram {
   private _container: HTMLDivElement;
@@ -17,14 +24,16 @@ export class NetworkDiagram {
     nodes,
     edges,
     eventHandler,
+    pixelQuality = "middle",
   }: {
     container: HTMLDivElement;
     nodes: NetworkDiagramNodeInfo[];
     edges: NetworkDiagramEdgeInfo[];
     eventHandler?: Partial<EventHandler>;
+    pixelQuality?: PixelQuality;
   }) {
     this._container = container;
-    this._scale = 4;
+    this._scale = QUALITY_SCALE_MAP[pixelQuality];
 
     this.init({ nodes, edges, eventHandler });
   }
