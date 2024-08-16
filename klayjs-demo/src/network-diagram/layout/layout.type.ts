@@ -12,9 +12,6 @@ export type NetworkDiagramLayout = NetworkDiagramNodeMeta & {
   edges: NetworkDiagramEdgeMeta[];
 };
 
-export type NetworkDiagramNodeInfo = Omit<
-  NetworkDiagramNodeMeta,
-  "width" | "height" | "x" | "y"
->;
+export type NetworkDiagramNodeInfo = Omit<NetworkDiagramNodeMeta, "x" | "y">;
 
 export type NetworkDiagramEdgeInfo = Omit<NetworkDiagramEdgeMeta, "sections">;

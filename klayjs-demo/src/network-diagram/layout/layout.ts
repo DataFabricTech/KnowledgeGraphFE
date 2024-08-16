@@ -11,7 +11,7 @@ export const layoutDefault = async ({
   nodes,
   edges,
   scale,
-  nodeSpacing = 2,
+  nodeSpacing = 0.4,
 }: {
   nodes: NetworkDiagramNodeInfo[];
   edges: NetworkDiagramEdgeInfo[];
