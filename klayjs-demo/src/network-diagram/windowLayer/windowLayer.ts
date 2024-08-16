@@ -18,12 +18,25 @@ export class WindowLayer {
   private _scale: number;
 
   private _position: Position = { x: 0, y: 0 };
-  private _minScale: number = 0.2;
-  private _maxScale: number = 5;
 
   private _eventHandler: EventHandler;
 
   private _spaceHold = false;
+
+  private _isRender = false;
+
+  private get minScale() {
+    return (
+      Math.min(
+        this._size.height / this._renderingLayer.size.height,
+        this._size.width / this._renderingLayer.size.width
+      ) / 2
+    );
+  }
+
+  private get maxScale() {
+    return 4;
+  }
 
   constructor({
     windowElement,
@@ -270,19 +283,19 @@ export class WindowLayer {
     this._position.y = point.y - worldY * this._scale;
   }
 
-  scaleUp(dRatio: number = 1) {
-    const diffUnit = 0.02;
+  scaleUp(dRatio: number = 2) {
+    const diffUnit = 0.01;
     const diff = Math.max(diffUnit, this._scale * diffUnit * dRatio);
     this.setScale(this._scale + diff);
   }
-  scaleDown(dRatio: number = 1) {
-    const diffUnit = 0.02;
+  scaleDown(dRatio: number = 2) {
+    const diffUnit = 0.01;
     const diff = Math.max(diffUnit, this._scale * diffUnit * dRatio);
     this.setScale(this._scale - diff);
   }
 
   private setScale(scale: number) {
-    this._scale = Math.max(this._minScale, Math.min(this._maxScale, scale));
+    this._scale = Math.max(this.minScale, Math.min(this.maxScale, scale));
   }
 
   fitToWindow() {
@@ -395,7 +408,7 @@ export class WindowLayer {
     nav.querySelector(".graph_nav_plus_btn")?.addEventListener("click", () => {
       this.scaleUpWithPoint(
         { x: this._size.width / 2, y: this._size.height / 2 },
-        15
+        30
       );
       this.render();
     });
@@ -403,7 +416,7 @@ export class WindowLayer {
     nav.querySelector(".graph_nav_minus_btn")?.addEventListener("click", () => {
       this.scaleDownWithPoint(
         { x: this._size.width / 2, y: this._size.height / 2 },
-        15
+        30
       );
       this.render();
     });
