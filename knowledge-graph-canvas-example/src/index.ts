@@ -1,6 +1,10 @@
-import * as ITEM from "knowledge-graph-canvas";
+import { CategoryGraph, NetworkDiagram } from "knowledge-graph-canvas";
 import { Category } from "knowledge-graph-canvas/dist/category-graph";
-const { CategoryGraph } = ITEM;
+import {
+  NetworkDiagramEdgeInfo,
+  NetworkDiagramNodeInfo,
+} from "knowledge-graph-canvas/dist/network-diagram/layout/layout.type";
+
 const categoryContainer = document.getElementById("category") as HTMLDivElement;
 
 const categoryData: Category = {
@@ -74,8 +78,45 @@ const categoryData: Category = {
   nodeList: [],
 };
 
-const graph = new CategoryGraph({
+new CategoryGraph({
   container: categoryContainer,
   categoryData,
   pixelQuality: "middle",
+});
+
+const relativeContainer = document.getElementById(
+  "network-container"
+) as HTMLDivElement;
+
+let idCount = 10;
+
+const nodes: NetworkDiagramNodeInfo[] = [
+  { id: "n1", width: 100, height: 100, style: { backgroundColor: "red" } },
+  { id: "n2", width: 100, height: 100 },
+  { id: "n3", width: 100, height: 100 },
+  { id: "n4", width: 100, height: 100 },
+];
+const edges: NetworkDiagramEdgeInfo[] = [
+  {
+    id: "e1",
+    sources: ["n1"],
+    targets: ["n2"],
+    style: { isLabel: true, color: "red" },
+    labels: [{ text: "최고점수" }],
+  },
+  { id: "e2", sources: ["n1"], targets: ["n3"] },
+  { id: "e3", sources: ["n4"], targets: ["n1"] },
+];
+new NetworkDiagram({
+  container: relativeContainer,
+  nodes,
+  edges,
+  eventHandler: {
+    onClick: (e, id) => {
+      console.log(e, id);
+    },
+    onHover: (e, id) => {
+      console.log(e.offsetX, e.offsetY, id);
+    },
+  },
 });

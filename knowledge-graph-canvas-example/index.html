@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Network Diagram Example</title>
     <style>
+      .network__block {
+        display: flex;
+        gap: 16px;
+      }
       #network-container {
-        width: 800px;
-        height: 600px;
+        width: 1200px;
+        height: 800px;
         border: 1px solid #ccc;
       }
       #category {
-        width: 800px;
-        height: 600px;
+        width: 1200px;
+        height: 800px;
         border: 1px solid #ccc;
       }
     </style>
   </head>
   <body>
-    <div id="network-container"></div>
+    <div class="network__block">
+      <div id="network-container"></div>
+      <div id="network-info"></div>
+    </div>
+
     <div id="category"></div>
     <script src="dist/bundle.js"></script>
   </body>
