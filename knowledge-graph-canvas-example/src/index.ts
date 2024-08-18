@@ -1,5 +1,6 @@
-import { Category, CategoryGraph } from "knowlege-gragh-canvas/category-graph";
-
+import * as ITEM from "knowledge-graph-canvas";
+import { Category } from "knowledge-graph-canvas/dist/category-graph";
+const { CategoryGraph } = ITEM;
 const categoryContainer = document.getElementById("category") as HTMLDivElement;
 
 const categoryData: Category = {
