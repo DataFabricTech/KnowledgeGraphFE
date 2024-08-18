@@ -1,6 +1,6 @@
 {
   "name": "knowlege-gragh-canvas",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -33,5 +33,9 @@
   "dependencies": {
     "elkjs": "^0.9.3",
     "rbush": "^4.0.0"
+  },
+  "peerDependencies": {
+    "@types/node": "^22.4.0",
+    "@types/rbush": "^3.0.3"
   }
 }

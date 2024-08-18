@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "npm run build && http-server"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,6 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "knowlege-gragh-canvas": "^1.0.1"
+    "knowlege-gragh-canvas": "^1.0.2"
   }
 }

@@ -80,7 +80,6 @@ const Canvas = () => {
     ctx.clearRect(0, 0, pixel.width, pixel.height);
 
     const scale = inputScale / maxScale;
-    // console.log(graph.width);
 
     const centerPoint = {
       x: (pixel.width - graph.width * scale) / 2,
