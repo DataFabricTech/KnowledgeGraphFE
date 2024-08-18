@@ -18,6 +18,7 @@ export class NetworkDiagram {
   private _scale: number;
   private _window?: WindowLayer;
   private _renderingLayer?: RenderingLayer;
+  private _edgeLength?: number;
 
   constructor({
     container,
@@ -25,15 +26,18 @@ export class NetworkDiagram {
     edges,
     eventHandler,
     pixelQuality = "middle",
+    edgeLength,
   }: {
     container: HTMLDivElement;
     nodes: NetworkDiagramNodeInfo[];
     edges: NetworkDiagramEdgeInfo[];
     eventHandler?: Partial<EventHandler>;
     pixelQuality?: PixelQuality;
+    edgeLength?: number;
   }) {
     this._container = container;
     this._scale = QUALITY_SCALE_MAP[pixelQuality];
+    this._edgeLength = edgeLength;
 
     this.init({ nodes, edges, eventHandler });
   }
@@ -50,6 +54,7 @@ export class NetworkDiagram {
       scale: this._scale,
       nodes,
       edges,
+      edgeLength: this._edgeLength,
     });
 
     this._renderingLayer = new RenderingLayer({ layout, scale: this._scale });
@@ -82,6 +87,7 @@ export class NetworkDiagram {
         ...this._renderingLayer.edgeModule.edges.map((node) => node.layout),
         ...edges,
       ],
+      edgeLength: this._edgeLength,
     });
 
     this._renderingLayer.nodeModule.nodes.forEach((node) =>

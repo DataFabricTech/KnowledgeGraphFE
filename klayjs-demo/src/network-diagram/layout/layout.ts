@@ -17,11 +17,13 @@ export const layoutDefault = async ({
   edges,
   scale,
   nodeSpacing = 0.4,
+  edgeLength = 200,
 }: {
   nodes: NetworkDiagramNodeInfo[];
   edges: NetworkDiagramEdgeInfo[];
   scale: number;
   nodeSpacing?: number;
+  edgeLength?: number;
 }) => {
   const graph = {
     id: "root",
@@ -31,13 +33,16 @@ export const layoutDefault = async ({
       // "elk.algorithm": "force",
       // "elk.algorithm": "mrtree",
       "elk.algorithm": "stress",
-      "org.eclipse.elk.stress.desiredEdgeLength": (300 * scale).toFixed(),
+      "org.eclipse.elk.stress.desiredEdgeLength": (
+        edgeLength * scale
+      ).toFixed(),
+      "org.eclipse.elk.stress.model": "CIRCLE",
 
-      "elk.force.model": "FRUCHTERMAN_REINGOLD",
+      // "elk.force.model": "FRUCHTERMAN_REINGOLD",
       // "elk.direction": "right",
       // "elk.scalefactor": "1",
       //  "elk.incremental": "true"
-      // "elk.fix": "true",
+      "elk.fix": "true",
       "elk.spacing.nodeNode": (20 * nodeSpacing).toFixed(),
       // "elk.edgeLength": "5000",
       "elk.force.repulsiveForce": "5000",

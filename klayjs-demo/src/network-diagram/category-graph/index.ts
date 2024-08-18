@@ -122,6 +122,7 @@ export class CategoryGraph {
       nodes,
       edges,
       pixelQuality,
+      edgeLength: 300,
     });
   }
 
