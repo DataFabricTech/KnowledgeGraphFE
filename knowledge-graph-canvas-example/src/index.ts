@@ -88,6 +88,8 @@ const relativeContainer = document.getElementById(
   "network-container"
 ) as HTMLDivElement;
 
+const info = document.querySelector(".network-info") as HTMLDivElement;
+
 let idCount = 10;
 
 const nodes: NetworkDiagramNodeInfo[] = [
@@ -129,6 +131,20 @@ const diagram = new NetworkDiagram({
       }
     },
     onHover: (e, id, type) => {
+      info.innerHTML = `
+      <div>
+      x: ${e.offsetX}
+      </div>
+      <div>
+      y: ${e.offsetY}
+      </div>
+      <div>
+      id: ${id}
+      </div>
+      <div>
+      type: ${type}
+      </div>
+      `;
       console.log(e.offsetX, e.offsetY, id, type);
     },
   },
