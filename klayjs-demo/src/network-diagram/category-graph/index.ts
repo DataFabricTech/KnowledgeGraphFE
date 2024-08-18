@@ -8,6 +8,17 @@ import { NetworkDiagramNodeStyle } from "../node/node.type";
 import { EventHandler } from "../windowLayer/windowLayer";
 import { PixelQuality } from "../index.type";
 
+const QUALITATIVE_PALETTE = [
+  "#636EFA",
+  "#EF553B",
+  "#00CC96",
+  "#AB63FA",
+  "#FFA15A",
+  "#19D3F3",
+  "#FF6692",
+  "#B6E880",
+] as const;
+
 export type CategoryNode = {
   id: string;
   name: string;
@@ -33,21 +44,27 @@ const _convert = (
   nodes: NetworkDiagramNodeInfo[],
   edges: NetworkDiagramEdgeInfo[],
   level: number,
-  parentId?: string
+  parentId?: string,
+  color?: string
 ) => {
   // if (level > 3) {
   //   return;
   // }
-  // if (nodes.length > 100) {
-  //   return;
-  // }
+  if (nodes.length > 60) {
+    return;
+  }
+  const currentColor = color || QUALITATIVE_PALETTE[0];
 
   const node: NetworkDiagramNodeInfo = {
     id: category.id,
     labels: [{ text: category.name }],
-    style: { ...category.style },
-    width: 150 - level * 20,
-    height: 150 - level * 20,
+    style: {
+      backgroundColor: currentColor,
+      outlineColor: currentColor,
+      ...category.style,
+    },
+    width: 240 - level * 36,
+    height: 240 - level * 36,
   };
 
   nodes.push(node);
@@ -64,9 +81,13 @@ const _convert = (
     nodes.push({
       id: node.id,
       labels: [{ text: node.name }],
-      style: { ...node.style },
-      width: 80,
-      height: 80,
+      style: {
+        backgroundColor: currentColor,
+        outlineColor: currentColor,
+        ...node.style,
+      },
+      width: 120,
+      height: 120,
     });
 
     edges.push({
@@ -75,9 +96,14 @@ const _convert = (
       sources: [category.id],
     });
   });
-  category.children.forEach((item) =>
-    _convert(item, nodes, edges, level + 1, category.id)
-  );
+  category.children.forEach((item, i) => {
+    let nextColor = currentColor;
+    if (!color) {
+      nextColor = QUALITATIVE_PALETTE[(i + 1) % QUALITATIVE_PALETTE.length];
+    }
+
+    _convert(item, nodes, edges, level + 1, category.id, nextColor);
+  });
 };
 
 export class CategoryGraph {
