@@ -1,5 +1,6 @@
 import { Position, Size } from "../index.type";
 import { NetworkDiagramLayout } from "../layout/layout.type";
+import { DiagramElementType } from "../windowLayer/windowLayer";
 import { EdgeRenderingModule } from "./edgeRenderingModule";
 import { NodeRenderingModule } from "./nodeRenderingModule";
 export declare class RenderingLayer {
@@ -19,7 +20,10 @@ export declare class RenderingLayer {
         height: number;
     }): void;
     render(scale?: number): void;
-    getElementId(position: Position): string | undefined;
+    getElementId(position: Position): {
+        id: string;
+        type: DiagramElementType;
+    } | undefined;
     get offscreenCanvas(): OffscreenCanvas;
     get size(): Size;
 }

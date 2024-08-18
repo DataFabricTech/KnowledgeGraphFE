@@ -1,10 +1,24 @@
 import { Position, Size } from "../index.type";
 import { RenderingLayer } from "../renderingLayer/renderingLayer";
 
+export type DiagramElementType = "node" | "edge";
+
 export type EventHandler = {
-  onClick: (e: MouseEvent, elementId?: string) => void;
-  onCtxClick: (e: MouseEvent, elementId?: string) => void;
-  onHover: (e: MouseEvent, elementId?: string) => void;
+  onClick: (
+    e: MouseEvent,
+    elementId?: string,
+    type?: DiagramElementType
+  ) => void;
+  onCtxClick: (
+    e: MouseEvent,
+    elementId?: string,
+    type?: DiagramElementType
+  ) => void;
+  onHover: (
+    e: MouseEvent,
+    elementId?: string,
+    type?: DiagramElementType
+  ) => void;
 };
 
 export class WindowLayer {
@@ -117,9 +131,7 @@ export class WindowLayer {
       y: e.offsetY,
     };
     const convertedPoint = this.convertPointToRenderLayout(position);
-    const id = this._renderingLayer.getElementId(convertedPoint);
-
-    return id;
+    return this._renderingLayer.getElementId(convertedPoint);
   };
 
   attachEvent() {
@@ -155,17 +167,17 @@ export class WindowLayer {
   }
 
   private click = (e: MouseEvent) => {
-    const id = this.getIdFromMouseEvent(e);
-    this._eventHandler.onClick(e, id);
+    const item = this.getIdFromMouseEvent(e);
+    this._eventHandler.onClick(e, item?.id, item?.type);
   };
 
   private move = (e: MouseEvent) => {
-    const id = this.getIdFromMouseEvent(e);
-    this._eventHandler.onHover(e, id);
+    const item = this.getIdFromMouseEvent(e);
+    this._eventHandler.onHover(e, item?.id, item?.type);
   };
   private contextMenu = (e: MouseEvent) => {
-    const id = this.getIdFromMouseEvent(e);
-    this._eventHandler.onCtxClick(e, id);
+    const item = this.getIdFromMouseEvent(e);
+    this._eventHandler.onCtxClick(e, item?.id, item?.type);
   };
 
   private wheel = (e: WheelEvent) => {

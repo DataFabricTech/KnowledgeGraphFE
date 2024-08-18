@@ -1,5 +1,6 @@
 import { Position, Size } from "../index.type";
 import { NetworkDiagramLayout } from "../layout/layout.type";
+import { DiagramElementType } from "../windowLayer/windowLayer";
 
 import { EdgeRenderingModule } from "./edgeRenderingModule";
 import { NodeRenderingModule } from "./nodeRenderingModule";
@@ -73,14 +74,18 @@ export class RenderingLayer {
     ctx.drawImage(this._nodeRenderingModule.offscreenCanvas, 0, 0);
   }
 
-  getElementId(position: Position): string | undefined {
+  getElementId(
+    position: Position
+  ): { id: string; type: DiagramElementType } | undefined {
     const nodeId = this._nodeRenderingModule.getElementId(position);
     if (nodeId) {
-      return nodeId;
+      return { id: nodeId, type: "node" };
     }
 
     const edgeId = this._edgeRenderingModule.getElementId(position);
-    return edgeId;
+    if (edgeId) {
+      return { id: edgeId, type: "edge" };
+    }
   }
 
   get offscreenCanvas() {
