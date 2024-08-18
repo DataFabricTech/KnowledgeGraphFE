@@ -28,5 +28,9 @@
     "typescript"
   ],
   "author": "Your Name",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "elkjs": "^0.9.3",
+    "rbush": "^4.0.0"
+  }
 }
