@@ -1,16 +1,32 @@
 {
   "name": "knowlege-gragh-canvas",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
   "devDependencies": {
     "@types/node": "^22.4.0",
     "typescript": "^5.5.4"
-  }
+  },
+  "keywords": [
+    "network",
+    "diagram",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
 }
