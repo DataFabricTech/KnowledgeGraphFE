@@ -85,7 +85,7 @@ export class DefaultEdge implements NetworkDiagramEdge {
     return section;
   }
 
-  isPointNearEdge(point: Position, threshold: number = 3) {
+  isPointNearEdge(point: Position, threshold: number = 5) {
     const A = this.section.startPoint;
     const B = this.section.endPoint;
     const C = point;
