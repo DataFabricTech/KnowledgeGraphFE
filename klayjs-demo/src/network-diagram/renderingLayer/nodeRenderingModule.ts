@@ -62,8 +62,6 @@ export class NodeRenderingModule implements RenderingModule {
     this._rTree = new NodeRTree();
 
     this._rTree.load(this._nodes);
-
-    console.log(this._nodes);
   }
 
   getElementId(position: Position): string | undefined {
@@ -103,7 +101,6 @@ export class NodeRenderingModule implements RenderingModule {
     );
 
     this._nodes.forEach((node) => {
-      console.log(node.x, node.y);
       node.draw(ctx);
     });
   }

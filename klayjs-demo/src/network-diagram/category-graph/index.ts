@@ -27,7 +27,7 @@ export type CategoryNode = {
 
 export type Category = CategoryNode & {
   children: Category[];
-  doList: CategoryNode[];
+  nodeList: CategoryNode[];
 };
 
 const convert = (category: Category) => {
@@ -47,12 +47,6 @@ const _convert = (
   parentId?: string,
   color?: string
 ) => {
-  // if (level > 3) {
-  //   return;
-  // }
-  if (nodes.length > 60) {
-    return;
-  }
   const currentColor = color || QUALITATIVE_PALETTE[0];
 
   const node: NetworkDiagramNodeInfo = {
@@ -63,8 +57,8 @@ const _convert = (
       outlineColor: currentColor,
       ...category.style,
     },
-    width: 240 - level * 36,
-    height: 240 - level * 36,
+    width: 200 - level * 24,
+    height: 200 - level * 24,
   };
 
   nodes.push(node);
@@ -77,7 +71,7 @@ const _convert = (
     edges.push(edge);
   }
 
-  category.doList.forEach((node) => {
+  category.nodeList.forEach((node) => {
     nodes.push({
       id: node.id,
       labels: [{ text: node.name }],

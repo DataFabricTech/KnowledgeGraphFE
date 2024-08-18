@@ -31,7 +31,7 @@ export const layoutDefault = async ({
       // "elk.algorithm": "force",
       // "elk.algorithm": "mrtree",
       "elk.algorithm": "stress",
-      "org.eclipse.elk.stress.desiredEdgeLength": (340 * scale).toFixed(),
+      "org.eclipse.elk.stress.desiredEdgeLength": (300 * scale).toFixed(),
 
       "elk.force.model": "FRUCHTERMAN_REINGOLD",
       // "elk.direction": "right",
