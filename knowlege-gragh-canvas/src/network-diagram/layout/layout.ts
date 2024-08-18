@@ -6,10 +6,10 @@ import {
 } from "./layout.type";
 
 const elk = new ELK({
-  workerFactory: (url) => {
-    const { Worker } = require("elkjs/lib/elk-worker.js"); // non-minified
-    return new Worker(url);
-  },
+  // workerFactory: (url) => {
+  //   const { Worker } = require("elkjs/lib/elk-worker.js"); // non-minified
+  //   return new Worker(url);
+  // },
 });
 
 export const layoutDefault = async ({

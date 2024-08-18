@@ -1,9 +1,9 @@
 import ELK from "elkjs";
 const elk = new ELK({
-    workerFactory: (url) => {
-        const { Worker } = require("elkjs/lib/elk-worker.js"); // non-minified
-        return new Worker(url);
-    },
+// workerFactory: (url) => {
+//   const { Worker } = require("elkjs/lib/elk-worker.js"); // non-minified
+//   return new Worker(url);
+// },
 });
 export const layoutDefault = async ({ nodes, edges, scale, nodeSpacing = 0.4, edgeLength = 200, }) => {
     const graph = {
