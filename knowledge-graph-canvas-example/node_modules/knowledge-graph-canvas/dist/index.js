@@ -7714,10 +7714,12 @@ class RenderingLayer {
     getElementId(position) {
         const nodeId = this._nodeRenderingModule.getElementId(position);
         if (nodeId) {
-            return nodeId;
+            return { id: nodeId, type: "node" };
         }
         const edgeId = this._edgeRenderingModule.getElementId(position);
-        return edgeId;
+        if (edgeId) {
+            return { id: edgeId, type: "edge" };
+        }
     }
     get offscreenCanvas() {
         return this._offscreenCanvas;
@@ -7748,20 +7750,19 @@ class WindowLayer {
                 y: e.offsetY,
             };
             const convertedPoint = this.convertPointToRenderLayout(position);
-            const id = this._renderingLayer.getElementId(convertedPoint);
-            return id;
+            return this._renderingLayer.getElementId(convertedPoint);
         };
         this.click = (e) => {
-            const id = this.getIdFromMouseEvent(e);
-            this._eventHandler.onClick(e, id);
+            const item = this.getIdFromMouseEvent(e);
+            this._eventHandler.onClick(e, item?.id, item?.type);
         };
         this.move = (e) => {
-            const id = this.getIdFromMouseEvent(e);
-            this._eventHandler.onHover(e, id);
+            const item = this.getIdFromMouseEvent(e);
+            this._eventHandler.onHover(e, item?.id, item?.type);
         };
         this.contextMenu = (e) => {
-            const id = this.getIdFromMouseEvent(e);
-            this._eventHandler.onCtxClick(e, id);
+            const item = this.getIdFromMouseEvent(e);
+            this._eventHandler.onCtxClick(e, item?.id, item?.type);
         };
         this.wheel = (e) => {
             e.preventDefault();

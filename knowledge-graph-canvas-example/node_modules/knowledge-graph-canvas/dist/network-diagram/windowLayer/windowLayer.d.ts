@@ -1,9 +1,10 @@
 import { Position } from "../index.type";
 import { RenderingLayer } from "../renderingLayer/renderingLayer";
+export type DiagramElementType = "node" | "edge";
 export type EventHandler = {
-    onClick: (e: MouseEvent, elementId?: string) => void;
-    onCtxClick: (e: MouseEvent, elementId?: string) => void;
-    onHover: (e: MouseEvent, elementId?: string) => void;
+    onClick: (e: MouseEvent, elementId?: string, type?: DiagramElementType) => void;
+    onCtxClick: (e: MouseEvent, elementId?: string, type?: DiagramElementType) => void;
+    onHover: (e: MouseEvent, elementId?: string, type?: DiagramElementType) => void;
 };
 export declare class WindowLayer {
     private _windowElement;

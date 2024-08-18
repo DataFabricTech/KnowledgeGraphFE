@@ -19,6 +19,6 @@
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
-    "knowledge-graph-canvas": "^1.0.2"
+    "knowledge-graph-canvas": "^1.0.3"
   }
 }

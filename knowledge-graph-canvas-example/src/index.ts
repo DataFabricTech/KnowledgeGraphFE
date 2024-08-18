@@ -101,22 +101,35 @@ const edges: NetworkDiagramEdgeInfo[] = [
     id: "e1",
     sources: ["n1"],
     targets: ["n2"],
-    style: { isLabel: true, color: "red" },
+    style: { isLabel: true, color: "red", fontSize: 20 },
     labels: [{ text: "최고점수" }],
   },
   { id: "e2", sources: ["n1"], targets: ["n3"] },
   { id: "e3", sources: ["n4"], targets: ["n1"] },
 ];
-new NetworkDiagram({
+const diagram = new NetworkDiagram({
   container: relativeContainer,
   nodes,
   edges,
   eventHandler: {
-    onClick: (e, id) => {
-      console.log(e, id);
+    onClick: (e, id, type) => {
+      if (type === "node" && id) {
+        const nodes: NetworkDiagramNodeInfo[] = [
+          { id: `n${idCount++}`, width: 100, height: 100 },
+          { id: `n${idCount++}`, width: 100, height: 100 },
+          { id: `n${idCount++}`, width: 100, height: 100 },
+        ];
+        const edges: NetworkDiagramEdgeInfo[] = nodes.map((node) => ({
+          id: `${id}_${node.id}`,
+          sources: [id],
+          targets: [node.id],
+        }));
+
+        diagram.addElement({ nodes, edges });
+      }
     },
-    onHover: (e, id) => {
-      console.log(e.offsetX, e.offsetY, id);
+    onHover: (e, id, type) => {
+      console.log(e.offsetX, e.offsetY, id, type);
     },
   },
 });
