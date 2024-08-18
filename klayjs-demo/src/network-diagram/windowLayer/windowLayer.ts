@@ -52,7 +52,7 @@ export class WindowLayer {
     scale: number;
   }) {
     this._renderingLayer = renderingLayer;
-    this._scale = 1 / Math.sqrt(scale);
+    this._scale = 1 / scale;
 
     this._eventHandler = {
       onClick: () => {},
