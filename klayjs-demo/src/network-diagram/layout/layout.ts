@@ -28,13 +28,18 @@ export const layoutDefault = async ({
     layoutOptions: {
       // "elk.algorithm": "layered",
       // "elk.algorithm": "radial",
-      "elk.algorithm": "force",
+      // "elk.algorithm": "force",
+      // "elk.algorithm": "mrtree",
+      "elk.algorithm": "stress",
+      "org.eclipse.elk.stress.desiredEdgeLength": (340 * scale).toFixed(),
+
       "elk.force.model": "FRUCHTERMAN_REINGOLD",
       // "elk.direction": "right",
       // "elk.scalefactor": "1",
       //  "elk.incremental": "true"
       // "elk.fix": "true",
       "elk.spacing.nodeNode": (20 * nodeSpacing).toFixed(),
+      // "elk.edgeLength": "5000",
       "elk.force.repulsiveForce": "5000",
     },
     children: nodes,
