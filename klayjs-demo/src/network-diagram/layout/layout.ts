@@ -5,7 +5,12 @@ import {
   NetworkDiagramNodeInfo,
 } from "./layout.type";
 
-const elk = new ELK();
+const elk = new ELK({
+  workerFactory: (url) => {
+    const { Worker } = require("elkjs/lib/elk-worker.js"); // non-minified
+    return new Worker(url);
+  },
+});
 
 export const layoutDefault = async ({
   nodes,
@@ -35,6 +40,8 @@ export const layoutDefault = async ({
     children: nodes,
     edges: edges,
   };
+
+  // worker.postMessage("hi");
 
   const layout = <NetworkDiagramLayout>await elk.layout(graph, {
     layoutOptions: { "elk.scaleFactor": scale.toFixed() },

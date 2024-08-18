@@ -38,9 +38,9 @@ const _convert = (
   // if (level > 3) {
   //   return;
   // }
-  if (nodes.length > 100) {
-    return;
-  }
+  // if (nodes.length > 100) {
+  //   return;
+  // }
 
   const node: NetworkDiagramNodeInfo = {
     id: category.id,
