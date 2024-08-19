@@ -1,4 +1,5 @@
-import ELK from "elkjs";
+import ELK from "elkjs/lib/elk.bundled.js";
+
 import {
   NetworkDiagramEdgeInfo,
   NetworkDiagramLayout,
