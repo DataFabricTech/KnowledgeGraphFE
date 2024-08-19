@@ -1,4 +1,4 @@
-import ELK, { ElkExtendedEdge, ElkNode } from "elkjs";
+import ELK from "elkjs";
 import {
   NetworkDiagramEdgeInfo,
   NetworkDiagramLayout,
