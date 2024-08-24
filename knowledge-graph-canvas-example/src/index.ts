@@ -109,6 +109,20 @@ const edges: NetworkDiagramEdgeInfo[] = [
   { id: "e2", sources: ["n1"], targets: ["n3"] },
   { id: "e3", sources: ["n4"], targets: ["n1"] },
 ];
+info.innerHTML = `
+<div>
+position x: 
+</div>
+<div>
+position y: 
+</div>
+<div>
+element id: 
+</div>
+<div>
+element type: 
+</div>
+`;
 const diagram = new NetworkDiagram({
   container: relativeContainer,
   nodes,
@@ -133,19 +147,18 @@ const diagram = new NetworkDiagram({
     onHover: (e, id, type) => {
       info.innerHTML = `
       <div>
-      x: ${e.offsetX}
+      position x: ${e.offsetX || ""}
       </div>
       <div>
-      y: ${e.offsetY}
+      position y: ${e.offsetY || ""}
       </div>
       <div>
-      id: ${id}
+      element id: ${id || "none"}
       </div>
       <div>
-      type: ${type}
+      element type: ${type || "none"}
       </div>
       `;
-      console.log(e.offsetX, e.offsetY, id, type);
     },
   },
 });
