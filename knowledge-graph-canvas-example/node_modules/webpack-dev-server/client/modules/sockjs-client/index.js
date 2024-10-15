@@ -3133,7 +3133,7 @@ module.exports = XHRCorsObject;
 
 var EventEmitter = (__webpack_require__(/*! events */ "./node_modules/sockjs-client/lib/event/emitter.js").EventEmitter),
   inherits = __webpack_require__(/*! inherits */ "./node_modules/inherits/inherits_browser.js");
-function XHRFake( /* method, url, payload, opts */
+function XHRFake(/* method, url, payload, opts */
 ) {
   var self = this;
   EventEmitter.call(this);

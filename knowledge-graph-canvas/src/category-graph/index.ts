@@ -122,7 +122,7 @@ export class CategoryGraph {
       nodes,
       edges,
       pixelQuality,
-      edgeLength: 300,
+      edgeLength: Math.min(1000, Math.max(nodes.length * 10, 300)),
     });
   }
 

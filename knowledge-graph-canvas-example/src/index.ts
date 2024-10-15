@@ -18,7 +18,7 @@ const categoryData: Category = {
 
       children: [],
       nodeList: [
-        { id: "411", name: "논현1동" },
+        { id: "411", name: "논현1동", style: { backgroundColor: "black" } },
         { id: "412", name: "삼성2동" },
         { id: "413", name: "역삼1동" },
         { id: "414", name: "일원본동" },
