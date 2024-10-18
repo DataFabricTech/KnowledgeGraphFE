@@ -103,6 +103,7 @@ export type CategoryGraphProps = {
   categoryData: Category;
   eventHandler?: Partial<EventHandler>;
   pixelQuality?: PixelQuality;
+  isFitScreenInit?: boolean;
 };
 
 export class CategoryGraph {
@@ -113,6 +114,7 @@ export class CategoryGraph {
     categoryData,
     eventHandler,
     pixelQuality,
+    isFitScreenInit,
   }: CategoryGraphProps) {
     const { nodes, edges } = convert(categoryData);
 
@@ -123,6 +125,8 @@ export class CategoryGraph {
       edges,
       pixelQuality,
       edgeLength: Math.min(1000, Math.max(nodes.length * 10, 300)),
+      nodeSpacing: 4,
+      isFitScreenInit,
     });
   }
 

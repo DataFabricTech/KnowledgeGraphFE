@@ -23,4 +23,6 @@ export type NetworkDiagramProps = {
   eventHandler?: Partial<EventHandler>;
   pixelQuality?: PixelQuality;
   edgeLength?: number;
+  nodeSpacing?: number;
+  isFitScreenInit?: boolean;
 };

@@ -15,9 +15,10 @@ export type CategoryGraphProps = {
     categoryData: Category;
     eventHandler?: Partial<EventHandler>;
     pixelQuality?: PixelQuality;
+    isFitScreenInit?: boolean;
 };
 export declare class CategoryGraph {
     private _diagram;
-    constructor({ container, categoryData, eventHandler, pixelQuality, }: CategoryGraphProps);
+    constructor({ container, categoryData, eventHandler, pixelQuality, isFitScreenInit, }: CategoryGraphProps);
     cleanUp(): void;
 }

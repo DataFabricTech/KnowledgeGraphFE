@@ -6,7 +6,8 @@ export declare class NetworkDiagram {
     private _window?;
     private _renderingLayer?;
     private _edgeLength?;
-    constructor({ container, nodes, edges, eventHandler, pixelQuality, edgeLength, }: NetworkDiagramProps);
+    private _nodeSpacing?;
+    constructor({ container, nodes, edges, eventHandler, pixelQuality, edgeLength, nodeSpacing, isFitScreenInit, }: NetworkDiagramProps);
     private init;
     addElement({ nodes, edges, }: {
         nodes: NetworkDiagramNodeInfo[];

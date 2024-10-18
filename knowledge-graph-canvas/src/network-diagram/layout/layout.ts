@@ -46,7 +46,7 @@ export const layoutDefault = async ({
       "elk.fix": "true",
       "elk.spacing.nodeNode": (20 * nodeSpacing).toFixed(),
       // "elk.edgeLength": "5000",
-      "elk.force.repulsiveForce": "5000",
+      "elk.force.repulsiveForce": "50000",
     },
     children: nodes,
     edges: edges,

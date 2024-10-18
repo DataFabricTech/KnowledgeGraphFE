@@ -20,16 +20,19 @@ export declare class WindowLayer {
     private _isRender;
     private get minScale();
     private get maxScale();
-    constructor({ windowElement, eventHandler, renderingLayer, scale, }: {
+    constructor({ windowElement, eventHandler, renderingLayer, scale, isFitScreenInit, }: {
         windowElement: HTMLDivElement;
         eventHandler?: Partial<EventHandler>;
         renderingLayer: RenderingLayer;
         scale: number;
+        isFitScreenInit?: boolean;
     });
     private convertPointToRenderLayout;
     private get windowCanvas();
     private get mapCanvas();
-    init(): void;
+    init({ isFitScreenInit }: {
+        isFitScreenInit?: boolean;
+    }): void;
     private getIdFromMouseEvent;
     attachEvent(): void;
     detachEvent(): void;

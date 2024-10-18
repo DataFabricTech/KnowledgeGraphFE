@@ -58,12 +58,14 @@ export class WindowLayer {
     eventHandler = {},
     renderingLayer,
     scale,
+    isFitScreenInit,
   }: {
     windowElement: HTMLDivElement;
 
     eventHandler?: Partial<EventHandler>;
     renderingLayer: RenderingLayer;
     scale: number;
+    isFitScreenInit?: boolean;
   }) {
     this._renderingLayer = renderingLayer;
     this._scale = 1 / scale;
@@ -77,7 +79,7 @@ export class WindowLayer {
 
     this._windowElement = windowElement;
 
-    this.init();
+    this.init({ isFitScreenInit });
   }
 
   private convertPointToRenderLayout(point: Position) {
@@ -106,7 +108,7 @@ export class WindowLayer {
     return this._mapCanvas;
   }
 
-  init() {
+  init({ isFitScreenInit }: { isFitScreenInit?: boolean }) {
     this._windowElement.style.position = "relative";
     const canvas = document.createElement("canvas");
     canvas.setAttribute("style", "width: 100%; height: 100%");
@@ -121,6 +123,19 @@ export class WindowLayer {
     this.attachEvent();
 
     this.initMap();
+
+    if (isFitScreenInit) {
+      this._scale = Math.min(
+        this._size.height / this._renderingLayer.size.height,
+        this._size.width / this._renderingLayer.size.width
+      );
+
+      this._position.x =
+        (this._size.width - this._renderingLayer.size.width * this._scale) / 2;
+      this._position.y =
+        (this._size.height - this._renderingLayer.size.height * this._scale) /
+        2;
+    }
     this.render();
 
     this.initZoomNav();
