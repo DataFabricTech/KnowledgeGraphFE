@@ -1,5 +1,6 @@
 import { ElkNode, ElkPort, ElkExtendedEdge, ElkLabel, LayoutOptions } from "elkjs";
 import { NetworkDiagramNode, NetworkDiagramNodeLayout, NetworkDiagramNodeStyle } from "./node.type";
+import { GlobalStyle } from "../index.type";
 export declare class CircleNode implements NetworkDiagramNode {
     children?: ElkNode[] | undefined;
     ports?: ElkPort[] | undefined;
@@ -14,12 +15,14 @@ export declare class CircleNode implements NetworkDiagramNode {
     private _activeStyle;
     private scale;
     private _layout;
-    constructor({ layout, scale, style, focusStyle, activeStyle, }: {
+    private _globalStyle;
+    constructor({ layout, scale, style, focusStyle, activeStyle, globalStyle, }: {
         layout: NetworkDiagramNodeLayout;
         scale?: number;
         style?: Partial<NetworkDiagramNodeStyle>;
         focusStyle?: Partial<NetworkDiagramNodeStyle>;
         activeStyle?: Partial<NetworkDiagramNodeStyle>;
+        globalStyle: Partial<GlobalStyle>;
     });
     get id(): string;
     get x(): number;

@@ -1,6 +1,6 @@
 {
   "name": "knowledge-graph-canvas",
-  "version": "1.0.18",
+  "version": "1.0.20",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",

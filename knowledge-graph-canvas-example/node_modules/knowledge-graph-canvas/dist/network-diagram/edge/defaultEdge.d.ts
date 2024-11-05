@@ -1,15 +1,17 @@
 import { ElkPoint, ElkLabel, LayoutOptions, ElkEdgeSection } from "elkjs";
 import { EdgeStyle, NetworkDiagramEdge, NetworkDiagramEdgeLayout } from "./edge.type";
-import { Position } from "../index.type";
+import { GlobalStyle, Position } from "../index.type";
 export declare class DefaultEdge implements NetworkDiagramEdge {
     junctionPoints?: ElkPoint[] | undefined;
     layoutOptions?: LayoutOptions | undefined;
     private _style;
     private _scale;
     private _layout;
-    constructor({ layout, style, }: {
+    private _globalStyle;
+    constructor({ layout, style, globalStyle, }: {
         layout: NetworkDiagramEdgeLayout;
         style?: Partial<EdgeStyle>;
+        globalStyle: Partial<GlobalStyle>;
     });
     get sources(): string[];
     get targets(): string[];

@@ -1266,10 +1266,10 @@ kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-knowledge-graph-canvas@^1.0.18:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/knowledge-graph-canvas/-/knowledge-graph-canvas-1.0.18.tgz#327cd47ec2c5b7518345116ea0502f59289d096a"
-  integrity sha512-bjostM/VBqiFaHckylL/GIZm6enTRYjRaVhQHAFMQ10GxBrNkTvW6X4b3UMMpKBRxpZMFMkGH+rksSaZ6Jf8Cg==
+knowledge-graph-canvas@^1.0.20:
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/knowledge-graph-canvas/-/knowledge-graph-canvas-1.0.20.tgz#05c60d079756a568f74fbb2b8dc0fb145bd035ce"
+  integrity sha512-TdUg8XrvoEzjVSRDl8qGkZkuD71SrdmUnncWhMpWRM8Z3svH24ydLYosN+QkMoPJiBITRwZ36fo7JHMqwpTYSg==
   dependencies:
     elkjs "^0.9.3"
     rbush "^4.0.0"

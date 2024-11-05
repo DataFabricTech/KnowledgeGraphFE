@@ -704,6 +704,9 @@ new CategoryGraph({
   categoryData,
   pixelQuality: "middle",
   isFitScreenInit: true,
+  // edgeStyle: {
+  //   color: "red",
+  // },
 });
 
 const relativeContainer = document.getElementById(

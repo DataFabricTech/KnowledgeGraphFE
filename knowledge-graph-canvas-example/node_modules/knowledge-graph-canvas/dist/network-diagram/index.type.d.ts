@@ -9,6 +9,12 @@ export type Position = {
     y: number;
 };
 export type PixelQuality = "low" | "middle" | "high";
+export type GlobalStyle = {
+    fontFamily: string;
+};
+export type GlobalStyleElement = {
+    globalStyle: Partial<GlobalStyle>;
+};
 export type NetworkDiagramProps = {
     container: HTMLDivElement;
     nodes: NetworkDiagramNodeInfo[];
@@ -18,4 +24,5 @@ export type NetworkDiagramProps = {
     edgeLength?: number;
     nodeSpacing?: number;
     isFitScreenInit?: boolean;
+    globalStyle?: Partial<GlobalStyle>;
 };

@@ -1,4 +1,4 @@
-import { Position, Size } from "../index.type";
+import { GlobalStyle, Position, Size } from "../index.type";
 import { RenderingModule } from "./renderingLayer";
 import { NetworkDiagramNodeMeta } from "../node/node.type";
 import { CircleNode } from "../node/CircleNode";
@@ -7,10 +7,12 @@ export declare class NodeRenderingModule implements RenderingModule {
     private _rTree;
     private _nodes;
     private _scale;
-    constructor({ size, nodes, scale, }: {
+    private _globalStyle;
+    constructor({ size, nodes, scale, globalStyle, }: {
         size: Size;
         nodes: NetworkDiagramNodeMeta[];
         scale: number;
+        globalStyle: Partial<GlobalStyle>;
     });
     get nodes(): CircleNode[];
     addNodes(nodes: NetworkDiagramNodeMeta[]): void;

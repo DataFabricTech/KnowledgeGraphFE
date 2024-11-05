@@ -1,15 +1,17 @@
 import { DefaultEdge } from "../edge/defaultEdge";
 import { NetworkDiagramEdgeMeta } from "../edge/edge.type";
-import { Position, Size } from "../index.type";
+import { GlobalStyle, Position, Size } from "../index.type";
 import { RenderingModule } from "./renderingLayer";
 export declare class EdgeRenderingModule implements RenderingModule {
     private _offscreenCanvas;
     private _edges;
     private _scale;
-    constructor({ size, edges, scale, }: {
+    private _globalStyle;
+    constructor({ size, edges, scale, globalStyle, }: {
         size: Size;
         edges: NetworkDiagramEdgeMeta[];
         scale: number;
+        globalStyle: Partial<GlobalStyle>;
     });
     addEdges(edges: NetworkDiagramEdgeMeta[]): void;
     get edges(): DefaultEdge[];

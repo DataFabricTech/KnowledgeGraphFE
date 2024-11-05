@@ -1,4 +1,4 @@
-import { Position, Size } from "../index.type";
+import { GlobalStyle, Position, Size } from "../index.type";
 import { NetworkDiagramLayout } from "../layout/layout.type";
 import { DiagramElementType } from "../windowLayer/windowLayer";
 import { EdgeRenderingModule } from "./edgeRenderingModule";
@@ -9,9 +9,10 @@ export declare class RenderingLayer {
     private _nodeRenderingModule;
     private _edgeRenderingModule;
     private _scale;
-    constructor({ layout, scale, }: {
+    constructor({ layout, scale, globalStyle, }: {
         layout: NetworkDiagramLayout;
         scale: number;
+        globalStyle: Partial<GlobalStyle>;
     });
     get nodeModule(): NodeRenderingModule;
     get edgeModule(): EdgeRenderingModule;

@@ -32,7 +32,7 @@ export declare class WindowLayer {
     private get mapCanvas();
     init({ isFitScreenInit }: {
         isFitScreenInit?: boolean;
-    }): void;
+    }): Promise<void>;
     private getIdFromMouseEvent;
     attachEvent(): void;
     detachEvent(): void;
