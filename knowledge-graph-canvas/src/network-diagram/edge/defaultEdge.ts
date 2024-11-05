@@ -4,7 +4,7 @@ import {
   NetworkDiagramEdge,
   NetworkDiagramEdgeLayout,
 } from "./edge.type";
-import { Position } from "../index.type";
+import { GlobalStyle, Position } from "../index.type";
 
 const DEFAULT_STYLE: EdgeStyle = {
   color: "#000",
@@ -24,16 +24,21 @@ export class DefaultEdge implements NetworkDiagramEdge {
   private _scale: number = 1;
   private _layout: NetworkDiagramEdgeLayout;
 
+  private _globalStyle: Partial<GlobalStyle>;
+
   // private label: string = "";
 
   constructor({
     layout,
     style = {},
+    globalStyle,
   }: {
     layout: NetworkDiagramEdgeLayout;
     style?: Partial<EdgeStyle>;
+    globalStyle: Partial<GlobalStyle>;
   }) {
     this._layout = layout;
+    this._globalStyle = globalStyle;
 
     this._style = { ...DEFAULT_STYLE, ...style };
   }

@@ -1,6 +1,6 @@
 import { DefaultEdge } from "../edge/defaultEdge";
 import { NetworkDiagramEdgeMeta } from "../edge/edge.type";
-import { Position, Size } from "../index.type";
+import { GlobalStyle, Position, Size } from "../index.type";
 import { RenderingModule } from "./renderingLayer";
 
 export class EdgeRenderingModule implements RenderingModule {
@@ -8,17 +8,21 @@ export class EdgeRenderingModule implements RenderingModule {
 
   private _edges: DefaultEdge[];
   private _scale: number;
+  private _globalStyle: Partial<GlobalStyle>;
 
   constructor({
     size,
     edges,
     scale,
+    globalStyle,
   }: {
     size: Size;
     edges: NetworkDiagramEdgeMeta[];
     scale: number;
+    globalStyle: Partial<GlobalStyle>;
   }) {
     this._offscreenCanvas = new OffscreenCanvas(size.width, size.height);
+    this._globalStyle = globalStyle;
 
     this._scale = scale;
 
@@ -26,6 +30,7 @@ export class EdgeRenderingModule implements RenderingModule {
       const edge = new DefaultEdge({
         layout: meta,
         // focusStyle: meta.focusStyle,
+        globalStyle: this._globalStyle,
         style: meta.style,
         // activeStyle: meta.activeStyle,
         // scale: scale,
@@ -40,6 +45,7 @@ export class EdgeRenderingModule implements RenderingModule {
       const edge = new DefaultEdge({
         layout: meta,
         style: meta.style,
+        globalStyle: this._globalStyle,
       });
       this._edges.push(edge);
     });

@@ -1,4 +1,4 @@
-import { NetworkDiagramProps, PixelQuality } from "./index.type";
+import { GlobalStyle, NetworkDiagramProps, PixelQuality } from "./index.type";
 import { layoutDefault } from "./layout/layout";
 import {
   NetworkDiagramEdgeInfo,
@@ -16,6 +16,7 @@ const QUALITY_SCALE_MAP = {
 export class NetworkDiagram {
   private _container: HTMLDivElement;
   private _scale: number;
+  private _globalStyle: Partial<GlobalStyle>;
   private _window?: WindowLayer;
   private _renderingLayer?: RenderingLayer;
   private _edgeLength?: number;
@@ -30,11 +31,13 @@ export class NetworkDiagram {
     edgeLength,
     nodeSpacing,
     isFitScreenInit,
+    globalStyle = {},
   }: NetworkDiagramProps) {
     this._container = container;
     this._scale = QUALITY_SCALE_MAP[pixelQuality];
     this._edgeLength = edgeLength;
     this._nodeSpacing = nodeSpacing;
+    this._globalStyle = globalStyle;
 
     this.init({ nodes, edges, eventHandler, isFitScreenInit });
   }
@@ -57,7 +60,12 @@ export class NetworkDiagram {
       nodeSpacing: this._nodeSpacing,
     });
 
-    this._renderingLayer = new RenderingLayer({ layout, scale: this._scale });
+    this._renderingLayer = new RenderingLayer({
+      layout,
+      scale: this._scale,
+      globalStyle: this._globalStyle,
+    });
+
     this._window = new WindowLayer({
       renderingLayer: this._renderingLayer,
       scale: this._scale,

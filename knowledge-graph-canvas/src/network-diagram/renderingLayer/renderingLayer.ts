@@ -1,4 +1,4 @@
-import { Position, Size } from "../index.type";
+import { GlobalStyle, Position, Size } from "../index.type";
 import { NetworkDiagramLayout } from "../layout/layout.type";
 import { DiagramElementType } from "../windowLayer/windowLayer";
 
@@ -16,9 +16,11 @@ export class RenderingLayer {
   constructor({
     layout,
     scale,
+    globalStyle,
   }: {
     layout: NetworkDiagramLayout;
     scale: number;
+    globalStyle: Partial<GlobalStyle>;
   }) {
     this._size = { width: layout.width, height: layout.height };
     this._scale = scale;
@@ -29,6 +31,7 @@ export class RenderingLayer {
       size: this._size,
       nodes: layout.children,
       scale,
+      globalStyle,
     });
     this._nodeRenderingModule.render(scale);
 
@@ -36,6 +39,7 @@ export class RenderingLayer {
       scale,
       size: this._size,
       edges: layout.edges,
+      globalStyle,
     });
     this._edgeRenderingModule.render(scale);
 

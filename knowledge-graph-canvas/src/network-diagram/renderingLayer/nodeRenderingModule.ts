@@ -1,4 +1,4 @@
-import { Position, Size } from "../index.type";
+import { GlobalStyle, Position, Size } from "../index.type";
 import { RenderingModule } from "./renderingLayer";
 import RBush from "rbush";
 import {
@@ -15,19 +15,23 @@ export class NodeRenderingModule implements RenderingModule {
   private _rTree: NodeRTree;
   private _nodes: CircleNode[];
   private _scale: number;
+  private _globalStyle: Partial<GlobalStyle>;
 
   constructor({
     size,
     nodes,
     scale,
+    globalStyle,
   }: {
     size: Size;
     nodes: NetworkDiagramNodeMeta[];
     scale: number;
+    globalStyle: Partial<GlobalStyle>;
   }) {
     this._offscreenCanvas = new OffscreenCanvas(size.width, size.height);
     this._rTree = new NodeRTree();
     this._scale = scale;
+    this._globalStyle = globalStyle;
 
     this._nodes = nodes.map((meta) => {
       const node = new CircleNode({
@@ -36,6 +40,7 @@ export class NodeRenderingModule implements RenderingModule {
         style: meta.style,
         activeStyle: meta.activeStyle,
         scale: scale,
+        globalStyle: this._globalStyle,
       });
 
       return node;
@@ -55,6 +60,7 @@ export class NodeRenderingModule implements RenderingModule {
         style: meta.style,
         activeStyle: meta.activeStyle,
         scale: this._scale,
+        globalStyle: this._globalStyle,
       });
 
       this._nodes.push(node);

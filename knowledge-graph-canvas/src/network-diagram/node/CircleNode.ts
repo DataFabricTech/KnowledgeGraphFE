@@ -10,6 +10,7 @@ import {
   NetworkDiagramNodeLayout,
   NetworkDiagramNodeStyle,
 } from "./node.type";
+import { GlobalStyle } from "../index.type";
 
 const DEFAULT_STYLE: NetworkDiagramNodeStyle = {
   fontSize: 30,
@@ -40,6 +41,7 @@ export class CircleNode implements NetworkDiagramNode {
   private scale: number = 1;
 
   private _layout: NetworkDiagramNodeLayout;
+  private _globalStyle: Partial<GlobalStyle>;
 
   constructor({
     layout,
@@ -47,14 +49,17 @@ export class CircleNode implements NetworkDiagramNode {
     style = {},
     focusStyle = {},
     activeStyle = {},
+    globalStyle,
   }: {
     layout: NetworkDiagramNodeLayout;
     scale?: number;
     style?: Partial<NetworkDiagramNodeStyle>;
     focusStyle?: Partial<NetworkDiagramNodeStyle>;
     activeStyle?: Partial<NetworkDiagramNodeStyle>;
+    globalStyle: Partial<GlobalStyle>;
   }) {
     this._layout = layout;
+    this._globalStyle = globalStyle;
 
     this._layout.width = this._layout.width / scale;
     this._layout.height = this._layout.height / scale;
