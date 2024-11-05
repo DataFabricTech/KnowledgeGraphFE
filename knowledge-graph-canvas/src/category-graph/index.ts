@@ -125,7 +125,7 @@ export class CategoryGraph {
       edges,
       pixelQuality,
       edgeLength: Math.min(1000, Math.max(nodes.length * 10, 300)),
-      nodeSpacing: 4,
+      nodeSpacing: 10,
       isFitScreenInit,
     });
   }
