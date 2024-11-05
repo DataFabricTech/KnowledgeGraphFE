@@ -6,6 +6,7 @@ import {
 import { NetworkDiagramNodeStyle } from "../network-diagram/node/node.type";
 import { EventHandler } from "../network-diagram/windowLayer/windowLayer";
 import { PixelQuality } from "../network-diagram/index.type";
+import { EdgeStyle } from "../network-diagram/edge/edge.type";
 
 const QUALITATIVE_PALETTE = [
   "#636EFA",
@@ -104,6 +105,7 @@ export type CategoryGraphProps = {
   eventHandler?: Partial<EventHandler>;
   pixelQuality?: PixelQuality;
   isFitScreenInit?: boolean;
+  edgeStyle?: Partial<EdgeStyle>;
 };
 
 export class CategoryGraph {
@@ -115,8 +117,13 @@ export class CategoryGraph {
     eventHandler,
     pixelQuality,
     isFitScreenInit,
+    edgeStyle,
   }: CategoryGraphProps) {
     const { nodes, edges } = convert(categoryData);
+
+    edges.forEach((edge) => {
+      edge.style = edgeStyle;
+    });
 
     this._diagram = new NetworkDiagram({
       container,
