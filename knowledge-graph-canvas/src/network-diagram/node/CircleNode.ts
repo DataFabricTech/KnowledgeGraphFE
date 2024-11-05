@@ -195,13 +195,34 @@ export class CircleNode implements NetworkDiagramNode {
 
     this.offscreenCtx.beginPath();
 
-    this.offscreenCtx.font = `${this.style.fontSize * this.scale}px serif`;
+    this.offscreenCtx.font = `${this.style.fontSize * this.scale}px ${
+      this._globalStyle.fontFamily || "pretendard"
+    }`;
 
     this.offscreenCtx.fillStyle = this.style.fontColor;
 
     this.offscreenCtx.textAlign = "center";
+
+    const maxWidth = this.radius * 2;
+
+    let label = this.label;
+    let textWidth = this.offscreenCtx.measureText(label).width;
+    const ellipsis = "...";
+
+    if (textWidth > maxWidth) {
+      while (
+        textWidth + this.offscreenCtx.measureText(ellipsis).width >
+        maxWidth
+      ) {
+        label = label.slice(0, -1); // 마지막 글자 제거
+        textWidth = this.offscreenCtx.measureText(label).width;
+      }
+
+      label += ellipsis;
+    }
+
     this.offscreenCtx.fillText(
-      this.label,
+      label,
       this.radius + this.circleDiff,
       this.radius + this.circleDiff + (this.style.fontSize * this.scale) / 3
     );

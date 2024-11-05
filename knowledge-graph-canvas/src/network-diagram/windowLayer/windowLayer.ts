@@ -108,7 +108,7 @@ export class WindowLayer {
     return this._mapCanvas;
   }
 
-  init({ isFitScreenInit }: { isFitScreenInit?: boolean }) {
+  async init({ isFitScreenInit }: { isFitScreenInit?: boolean }) {
     this._windowElement.style.position = "relative";
     const canvas = document.createElement("canvas");
     canvas.setAttribute("style", "width: 100%; height: 100%");
@@ -136,6 +136,8 @@ export class WindowLayer {
         (this._size.height - this._renderingLayer.size.height * this._scale) /
         2;
     }
+    await document.fonts.ready;
+
     this.render();
 
     this.initZoomNav();

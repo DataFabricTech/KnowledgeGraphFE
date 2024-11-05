@@ -126,7 +126,9 @@ export class DefaultEdge implements NetworkDiagramEdge {
     ctx.stroke();
 
     if (this._style.isLabel && this.label) {
-      ctx.font = `${this._style.fontSize * scale}px serif`;
+      ctx.font = `${this._style.fontSize * scale}px ${
+        this._globalStyle.fontFamily || "pretendard"
+      }`;
       const metricsText = ctx.measureText(this.label);
 
       ctx.globalAlpha = 0.7;
