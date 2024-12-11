@@ -23,3 +23,8 @@ export const getCategoryData = async () => {
 
   return data;
 };
+export const getDemoData = async () => {
+  const data = await import("./demo/demo.json");
+
+  return data;
+};

@@ -3,7 +3,7 @@ import cola from "cytoscape-cola";
 import fcose from "cytoscape-fcose";
 import elk from "cytoscape-elk";
 import { Visualization } from "./type";
-import { getRelationData } from "@/components/canvas/data/getData";
+import { getDemoData, getRelationData } from "@/components/canvas/data/getData";
 import { convertRelation } from "@/components/canvas/data/convert";
 import { RootStore } from "./rootStore";
 import { makeAutoObservable, toJS } from "mobx";
@@ -67,7 +67,8 @@ export class RelationVisualizationStore implements Visualization {
 
   private async _init() {
     this._isLoading = true;
-    const data = await getRelationData(this._id);
+    // const data = await getRelationData(this._id);
+    const data = await getDemoData();
 
     this._elements.set("origin", convertRelation(data, { targetId: this._id }));
 

@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "learningDate": "2024-12-09T17:43:28",
+    "applyDate": "2024-12-09T17:43:28",
+    "method": "association-analysis",
+    "algorithm": ["CosineSimilarity"]
+  },
+  "nodes": [
+    {
+      "id": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "name": "fusionmodel_301",
+      "type": "Trino",
+      "user": "admin"
+    },
+    {
+      "id": "03a96aaa-81d0-40ef-b3f8-26bb778aeeb8",
+      "name": "element_types",
+      "type": "Postgres",
+      "user": "ingestion-bot"
+    },
+    {
+      "id": "076b0dc5-de88-4079-b64b-52c487d8c577",
+      "name": "076b0dc5-de88-4079-b64b-52c487d8c577",
+      "type": "",
+      "user": ""
+    },
+    {
+      "id": "0ffe99c4-e588-487e-bf7e-07af96e063a5",
+      "name": "한국교통안전공단_자동차사고_피해지원_대상자_선정_재산등급별_점수_기준",
+      "type": "Mysql",
+      "user": "admin"
+    },
+    {
+      "id": "122a3a24-218b-46fc-ac94-76fd15834cb4",
+      "name": "국민연금공단_미지급급여_지급내역_202307",
+      "type": "Postgres",
+      "user": "ingestion-bot"
+    },
+    {
+      "id": "1443ba2a-d305-40ab-a321-bc1716e5e2d1",
+      "name": "tbl_ym_시군구별_이동자수",
+      "type": "Postgres",
+      "user": "admin"
+    },
+    {
+      "id": "209bb2cb-aabf-4e0f-be78-2f8a4ca99617",
+      "name": "fusionmodel_88",
+      "type": "Trino",
+      "user": "admin"
+    },
+    {
+      "id": "27598abb-682b-4ef2-9187-0409ad9745f7",
+      "name": "fusionmodel_3",
+      "type": "Trino",
+      "user": "ingestion-bot"
+    },
+    {
+      "id": "285aff36-4fce-48b6-afb4-3aa22dca58fb",
+      "name": "부산광역시_동래구_아동복지시설현황",
+      "type": "Mysql",
+      "user": "admin"
+    },
+    {
+      "id": "2ce74edc-7133-4d47-9afa-cd23df4fd8b5",
+      "name": "tb_seocho_50m_grid_area",
+      "type": "Postgres",
+      "user": "admin"
+    },
+    {
+      "id": "2e3f3178-1cd9-463c-8595-a9bd88cf4a17",
+      "name": "fusionmodel_8",
+      "type": "Trino",
+      "user": "ingestion-bot"
+    },
+    {
+      "id": "33c28769-05b4-4563-b28a-782a9fb0fa0c",
+      "name": "tbl_day_daejeon_weather",
+      "type": "Postgres",
+      "user": "ingestion-bot"
+    },
+    {
+      "id": "35bd6832-38c1-4101-9f70-b3e95f8d2121",
+      "name": "한국연구재단_학교검색_리스트_목록",
+      "type": "Postgres",
+      "user": "admin"
+    },
+    {
+      "id": "40de545a-889b-4251-a67e-f0027a697ab0",
+      "name": "전북특별자치도_완주군_의료기관현황",
+      "type": "Mysql",
+      "user": "admin"
+    },
+    {
+      "id": "45a7580a-4b4b-4da8-947c-c29b4861d9ff",
+      "name": "02_사용자시나리오_v1.0.hwp",
+      "type": "MinIO",
+      "user": "admin"
+    },
+    {
+      "id": "493b9c19-88d4-4a3e-b97f-4af7bb03abc4",
+      "name": "서울특별시 송파구_부동산중개업소_20240812.csv",
+      "type": "MinIO",
+      "user": "admin"
+    },
+    {
+      "id": "49f46931-973a-47e5-bc77-3036b8e42a31",
+      "name": "IITP-DF-06_클래스설계서(2차년도)_v1.0_word.docx",
+      "type": "MinIO",
+      "user": "admin"
+    },
+    {
+      "id": "5e6d5e55-a4b9-44ad-b666-bfcc071afb7d",
+      "name": "test_datamodel_jun",
+      "type": "Trino",
+      "user": "ingestion-bot"
+    },
+    {
+      "id": "638a48d9-8ad6-411f-a7b8-d0938d6f5115",
+      "name": "전라남도_여수시_2022년_지가테이블",
+      "type": "Postgres",
+      "user": "admin"
+    },
+    {
+      "id": "77377e92-a2be-4477-b9a3-ef3c5565bc49",
+      "name": "전라남도_목포시_수소차_등록현황",
+      "type": "Postgres",
+      "user": "ingestion-bot"
+    },
+    {
+      "id": "9d2bc49f-17cf-4a7e-9525-8b6514270abf",
+      "name": "부산광역시_동래구_노인일자리 사업 현황_20240812.csv",
+      "type": "MinIO",
+      "user": "admin"
+    },
+    {
+      "id": "f0bb90e2-2175-40a3-b79c-cbf7fe7d9843",
+      "name": "fusionmodel_0101",
+      "type": "Trino",
+      "user": "ingestion-bot"
+    },
+    {
+      "id": "fa504170-dd79-48c4-9917-ea5ab20bdf17",
+      "name": "전라남도_목포시_사업장폐기물배출자_신고현황",
+      "type": "Postgres",
+      "user": "ingestion-bot"
+    }
+  ],
+  "edges": [
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "03a96aaa-81d0-40ef-b3f8-26bb778aeeb8",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "076b0dc5-de88-4079-b64b-52c487d8c577",
+      "score": 0.70710677
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "0ffe99c4-e588-487e-bf7e-07af96e063a5",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "122a3a24-218b-46fc-ac94-76fd15834cb4",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "1443ba2a-d305-40ab-a321-bc1716e5e2d1",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "209bb2cb-aabf-4e0f-be78-2f8a4ca99617",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "27598abb-682b-4ef2-9187-0409ad9745f7",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "285aff36-4fce-48b6-afb4-3aa22dca58fb",
+      "score": 0.57735026
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "2ce74edc-7133-4d47-9afa-cd23df4fd8b5",
+      "score": 0.70710677
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "2e3f3178-1cd9-463c-8595-a9bd88cf4a17",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "33c28769-05b4-4563-b28a-782a9fb0fa0c",
+      "score": 0.70710677
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "35bd6832-38c1-4101-9f70-b3e95f8d2121",
+      "score": 0.70710677
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "40de545a-889b-4251-a67e-f0027a697ab0",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "45a7580a-4b4b-4da8-947c-c29b4861d9ff",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "493b9c19-88d4-4a3e-b97f-4af7bb03abc4",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "49f46931-973a-47e5-bc77-3036b8e42a31",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "5e6d5e55-a4b9-44ad-b666-bfcc071afb7d",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "638a48d9-8ad6-411f-a7b8-d0938d6f5115",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "77377e92-a2be-4477-b9a3-ef3c5565bc49",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "9d2bc49f-17cf-4a7e-9525-8b6514270abf",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "f0bb90e2-2175-40a3-b79c-cbf7fe7d9843",
+      "score": 1.0
+    },
+    {
+      "sourceNodeId": "01c6edea-195f-42e4-ba6a-a8e71101f9cd",
+      "targetNodeId": "fa504170-dd79-48c4-9917-ea5ab20bdf17",
+      "score": 1.0
+    }
+  ]
+}
